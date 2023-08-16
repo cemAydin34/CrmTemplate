@@ -1,0 +1,339 @@
+﻿<!--begin::Main-->
+<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+	<!--begin::Content wrapper-->
+	<div class="d-flex flex-column flex-column-fluid">
+
+		<!--begin::Content-->
+		<div id="kt_app_content" class="app-content flex-column-fluid">
+			<!--begin::Content container-->
+			<div id="kt_app_content_container" class="app-container">
+				<!--begin::Inbox App - Messages -->
+				<div class="d-flex flex-column flex-lg-row">
+					<!--begin::Sidebar-->
+					<div class="d-none d-lg-flex flex-column flex-lg-row-auto w-100 w-lg-275px" data-kt-drawer="true"
+						data-kt-drawer-name="inbox-aside" data-kt-drawer-activate="{default: true, lg: false}"
+						data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start"
+						data-kt-drawer-toggle="#kt_inbox_aside_toggle">
+						<!--begin::Sticky aside-->
+						<div class="card card-flush mb-0" data-kt-sticky="true" data-kt-sticky-name="inbox-aside-sticky"
+							data-kt-sticky-offset="{default: false, xl: '100px'}" data-kt-sticky-width="{lg: '275px'}"
+							data-kt-sticky-left="auto" data-kt-sticky-top="100px" data-kt-sticky-animation="false"
+							data-kt-sticky-zindex="95">
+							<!--begin::Aside content-->
+							<div class="card-body">
+								<!--begin::Menu-->
+								<div
+									class="menu menu-column menu-rounded menu-state-bg menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary mb-0">
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3">
+										<!--begin::Inbox-->
+										<span class="menu-link active" onclick="partialGetir('/customer/_Profile')">
+											<span class="menu-icon">
+												<i class="fa fa-user-circle menu-icon"></i>
+											</span>
+											<span class="menu-title fw-bold">
+												Profile</span>
+										</span>
+										<!--end::Inbox-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Marked-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Contacts')">
+											<span class="menu-icon">
+												<i class="fa fa-user menu-icon">
+
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Contacts</span>
+											<span class="badge badge-light-success">3</span>
+										</span>
+										<!--end::Marked-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Draft-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Notes')">
+											<span class="menu-icon">
+												<i class="fa-regular fa-note-sticky menu-icon">
+
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Notes</span>
+											<span class="badge badge-light-danger">1</span>
+										</span>
+										<!--end::Draft-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Sent-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Statement')">
+											<span class="menu-icon">
+												<i class="fa fa-area-chart menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Statement</span>
+										</span>
+										<!--end::Sent-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Sent-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Invoices')">
+											<span class="menu-icon">
+												<i class="fa fa-file-text menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Invoices</span>
+										</span>
+										<!--end::Sent-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Sent-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Payments')">
+											<span class="menu-icon">
+												<i class="fa fa-line-chart menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Payments</span>
+										</span>
+										<!--end::Sent-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Sent-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Proposals')">
+											<span class="menu-icon">
+												<i class="fa-regular fa-file-powerpoint menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Proposals</span>
+										</span>
+										<!--end::Sent-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Sent-->
+										<span class="menu-link" onclick="partialGetir('/customer/_CreditNotes')">
+											<span class="menu-icon">
+												<i class="fa-regular fa-file-lines menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Credit Notes</span>
+										</span>
+										<!--end::Sent-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom"
+										onclick="partialGetir('/customer/_Estimates')">
+										<!--begin::Trash-->
+										<span class="menu-link">
+											<span class="menu-icon">
+												<i class="fa-regular fa-file menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Estimates</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Trash-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Subscriptions')">
+											<span class="menu-icon">
+												<i class="fa fa-repeat menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Subscriptions</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Trash-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Expenses')">
+											<span class="menu-icon">
+												<i class="fa-regular fa-file-lines menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Expenses</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Trash-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Contracts')">
+											<span class="menu-icon">
+												<i class="fa fa-file-contract menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Contracts</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Trash-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Projects')">
+											<span class="menu-icon">
+												<i class="fa-solid fa-chart-gantt menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Projects</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Trash-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Tasks')">
+											<span class="menu-icon">
+												<i class="fa fa-tasks menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Tasks</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Trash-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Tickets')">
+											<span class="menu-icon">
+												<i class="fa-regular fa-life-ring menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Tickets</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+									<!--begin::Menu item-->
+									<div class="menu-item mb-3 border-bottom">
+										<!--begin::Trash-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Files')">
+											<span class="menu-icon">
+												<i class="fa fa-paperclip menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Files</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+
+									<!--begin::Menu item-->
+									<div class="menu-item">
+										<!--begin::Trash-->
+										<span class="menu-link" onclick="partialGetir('/customer/_Reminders')">
+											<span class="menu-icon">
+												<i class="fa-regular fa-clock menu-icon">
+												</i>
+											</span>
+											<span class="menu-title fw-bold">Reminders</span>
+										</span>
+										<!--end::Trash-->
+									</div>
+									<!--end::Menu item-->
+								</div>
+								<!--end::Menu-->
+
+							</div>
+							<!--end::Aside content-->
+						</div>
+						<!--end::Sticky aside-->
+					</div>
+					<!--end::Sidebar-->
+					<!--begin::Content-->
+					<div class="flex-lg-row-fluid ms-lg-7 ms-xl-10" id="contentArea">
+						<!--begin::Card-->
+						@await Html.PartialAsync("_Statement")
+						<!--end::Card-->
+					</div>
+					<!--end::Content-->
+				</div>
+				<!--end::Inbox App - Messages -->
+			</div>
+			<!--end::Content container-->
+		</div>
+		<!--end::Content-->
+	</div>
+	<!--end::Content wrapper-->
+	<!--begin::Footer-->
+	<div id="kt_app_footer" class="app-footer">
+		<!--begin::Footer container-->
+		<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+			<!--begin::Copyright-->
+			<div class="text-dark order-2 order-md-1">
+				<span class="text-muted fw-semibold me-1">2023&copy;</span>
+				<a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+			</div>
+			<!--end::Copyright-->
+			<!--begin::Menu-->
+			<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
+				<li class="menu-item">
+					<a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
+				</li>
+				<li class="menu-item">
+					<a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
+				</li>
+				<li class="menu-item">
+					<a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
+				</li>
+			</ul>
+			<!--end::Menu-->
+		</div>
+		<!--end::Footer container-->
+	</div>
+	<!--end::Footer-->
+</div>
+<!--end:::Main-->
+
+
+@section styles{
+<link href="~/css/customer.css" rel="stylesheet" />
+}
+
+@section scripts {
+<!--begin::Vendors Javascript(used for this page only)-->
+<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<!--end::Vendors Javascript-->
+<!--begin::Custom Javascript(used for this page only)-->
+<script src="assets/js/custom/apps/inbox/listing.js"></script>
+<script src="assets/js/widgets.bundle.js"></script>
+<script src="assets/js/custom/widgets.js"></script>
+<script src="assets/js/custom/apps/chat/chat.js"></script>
+<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+<!--end::Custom Javascript-->
+<script>
+	function partialGetir(url) {
+		$.ajax({
+			url: url,
+			type: 'GET',
+			dataType: 'html',
+			success: function (response) {
+				$('#contentArea').empty().html(response);
+			}
+		});
+	}
+</script>
+
+}

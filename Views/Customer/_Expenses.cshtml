@@ -1,0 +1,208 @@
+@{
+    Layout = null;
+}
+<div class="row mx-auto">
+    <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
+        <h2>Expenses</h2>
+    </div>
+    <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+        <div class="card-header mt-5 customer-form__inner row align-items-center">
+            <div class="row mt-0 mx-auto gy-5">
+                <a class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center me-5"
+                    href="#">
+                    <i class="fa-regular fa-plus"></i>
+                    Record Expense
+                </a>
+            </div>
+
+            <div class="row g-5 mb-10 px-0 mx-auto">
+
+
+                <div class="col-sm-12 col-md-3">
+                    <div class="card card-flush">
+                        <div class="card-body py-5">
+                            <h5 style="font-size: 13px;" class="card-title mt-0 fw-bold text-default">Total</h5>
+                            <p style="font-size: 14px;" class="card-text mb-0 text-primary fw-bold">$1,200.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-3">
+                    <div class="card card-flush">
+                        <div class="card-body py-5">
+                            <h5 style="font-size: 13px;" class="card-title mt-0 fw-bold text-success">Billable</h5>
+                            <p style="font-size: 14px;" class="card-text mb-0 text-primary fw-bold">$1,200.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-3">
+                    <div class="card card-flush">
+                        <div class="card-body py-5">
+                            <h5 style="font-size: 13px;" class="card-title mt-0 fw-bold text-warning">Non Billable</h5>
+                            <p style="font-size: 14px;" class="card-text mb-0 text-primary fw-bold">$1,200.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-3">
+                    <div class="card card-flush">
+                        <div class="card-body py-5">
+                            <h5 style="font-size: 13px;" class="card-title mt-0 fw-bold text-danger">Not Invoiced</h5>
+                            <p style="font-size: 14px;" class="card-text mb-0 text-primary fw-bold">$1,200.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pb-3 mx-auto">
+                <select class="form-select col" aria-label="Page Select">
+                    <option selected="" value="5">Page</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="100">100</option>
+                    <option value="">All</option>
+                </select>
+                <div class="btn-group col px-0">
+                    <button
+                        class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">Export</button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i class="fas fa-sync"></i>
+                    </button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-row-dashed table-row-gray-300 gy-7 align-items-center">
+                    <thead>
+                        <tr class="fw-bold fs-6 text-gray-800">
+                            <th>Category #</th>
+                            <th>Amount</th>
+                            <th>Name</th>
+                            <th>Receipt</th>
+                            <th>Date</th>
+                            <th>Project</th>
+                            <th>Invoice</th>
+                            <th>Reference #</th>
+                            <th>Payment Mode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#">PRO-000003</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <a class="text-dark" href="#">$1,078.00</a>
+                            </td>
+                            <td class="text-dark">So she called softly after it, never once considering how in the
+                                middle, being held up by a row of.</td>
+                            <td class="text-dark">09/08/2023</td>
+                            <td class="text-dark">16/08/2023</td>
+                            <td>
+                                <span class="text-dark">SEO Optimization</span>
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span class="text-dark">558</span>
+                            </td>
+                            <td>
+                                <span class="text-dark">Bank</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">PRO-000003</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <a class="text-dark" href="#">$1,078.00</a>
+                            </td>
+                            <td class="text-dark">So she called softly after it, never once considering how in the
+                                middle, being held up by a row of.</td>
+                            <td class="text-dark">09/08/2023</td>
+                            <td class="text-dark">16/08/2023</td>
+                            <td>
+                                <span class="text-dark">SEO Optimization</span>
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span class="text-dark">558</span>
+                            </td>
+                            <td>
+                                <span class="text-dark">Bank</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row pt-5 mx-auto">
+                <div
+                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <div class="row mx-2 align-items-center flex-column pb-5 text-center">
+                        Toplam 48630 Kayıttan
+                        <input value="1" style="scale:0.8; max-width: 100px;" type="text" class="form-control col mx-3"
+                            wfd-id="id38">
+                        arası gösteriliyor
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                    <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled"
+                                id="kt_ecommerce_products_table_previous">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="1">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="1" class="page-link pager-page active">1</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="2" class="page-link pager-page ">2</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="3" class="page-link pager-page ">3</a>
+                            </li>
+                            <li class="paginate_button page-item next ">
+                                <a class="page-link pager-page" href="#" page="2">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item">
+                                <a class="page-link pager-page" href="#" page="4863">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

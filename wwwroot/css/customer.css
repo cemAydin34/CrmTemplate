@@ -1,0 +1,247 @@
+﻿.row {
+  margin-inline: 0 !important;
+}
+
+.customers-summary__row-titles {
+  border-right: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.mobile-margin-top {
+  margin-top: 10px;
+}
+
+.customer-form__inner {
+  gap: 0 10px;
+}
+
+.customer-form__inner select,
+.customer-form__inner input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.customer-form__inner select,
+.customer-form__inner button {
+  max-width: 100px;
+  /*  height: 43px; */
+  height: auto;
+  font-size: 10px;
+  height: 45px;
+  max-width: 60px !important;
+  height: 30px;
+}
+
+.customer-form__inner select {
+  max-width: 75px !important;
+  padding: 5px 10px;
+}
+
+#groups-select {
+  max-width: 300px !important;
+  height: auto !important;
+  font-size: 12px !important;
+}
+
+#refresh-btn {
+  max-width: 50px !important;
+}
+
+#bulk-actions {
+  max-width: 105px !important;
+}
+
+.customer-form__inner__export-btn {
+  margin-left: auto;
+}
+
+.customer-form__inner button {
+  max-width: 115px;
+}
+
+.customer-form__checkbox {
+  gap: 0 5px;
+}
+
+.customers-buttons a {
+  font-size: 13px;
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  opacity: 0.7;
+}
+
+/* customer-slider */
+
+.customer-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.customer-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.customer-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.customer-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+input:checked+.customer-slider {
+  background-color: #2196f3;
+}
+
+input:focus+.customer-slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.customer-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+td {
+  vertical-align: top;
+  color: #2563eb !important;
+  position: relative;
+}
+
+.row-options {
+  padding: 2px 0 0;
+  /*   position: absolute;
+  left: -9999em; */
+  font-size: 12px;
+  visibility: hidden;
+}
+
+td:hover .row-options {
+  /*   position: static; */
+  visibility: visible;
+}
+
+#PagerAdetSelect {
+  width: 105px;
+}
+
+.customer-details-btn {
+  max-width: 135px;
+  height: 33px;
+  font-size: 13px;
+  padding: 20px !important;
+}
+
+
+.nav-item a {
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item a:focus,
+.nav-item a:active {
+  border-bottom-color: #2563eb
+}
+
+.nav-item a:hover:not(:focus) {
+  border-bottom-color: rgb(0, 0, 0, 0.3)
+}
+
+thead th {
+  white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .customers-summary__row-titles {
+    border-right: none;
+    text-align: center;
+    padding-top: 1em;
+    height: 36px;
+  }
+
+  .customers-summary__row-titles p {
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #tasks_related_filter {
+    padding-top: 10px;
+  }
+
+  #tasks_related_filter p {
+    text-align: start;
+  }
+
+  .tasks_related_filter__inner {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  /*  .tasks_related_filter__inner > *:nth-child(odd) {
+    grid-column: 1;
+  }
+  
+  .tasks_related_filter__inner > *:nth-child(even) {
+    grid-column: 3;
+  } */
+
+  .tasks_related_filter__inner div {
+    min-width: 75px;
+  }
+
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+
+}
+
+@media(max-width:640px) {
+
+  #billing-and-shipping,
+  #customer-admins {
+    margin-inline: 0 !important;
+  }
+
+  /*   .btn-group {
+    margin-top: 15px;
+    padding-left: 0;
+  }
+
+  #btn-group__export-btn {
+    margin-left: 0;
+  } */
+}

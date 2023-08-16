@@ -1,0 +1,470 @@
+<div class="row">
+    <div class="card shadow-sm customers-summary col-11 mx-auto mobile-margin-top visible-sm">
+        <div class="card-header">
+            <h3 class="card-title">Subscriptions Summary</h3>
+        </div>
+        <div class="card-body py-5">
+            <div class="row pt-5 align-items-center">
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p style="color: #03a9f4">
+                        <span class="h2 me-3">0</span>Not Subscribed
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-success">
+                        <span class="h2 me-3">0</span>Active Customers
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-success"><span class="h2 me-3">0</span>Future</p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-danger"><span class="h2 me-3">0</span>Past Due</p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-danger"><span class="h2 me-3">0</span>Unpaid</p>
+                </div>
+
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-info"><span class="h2 me-3">0</span>Incomplite</p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-danger"><span class="h2 me-3">0</span>Cancelled</p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-muted">
+                        <span class="h2 me-3">0</span>Incomplete Expired
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*
+    <div class="row inputs">
+    <form class="card shadow-sm customer-form col-11 mx-auto mt-5">
+    <div class="customer-form__inner card-body row align-items-center">
+    <div class="col-md-12 col-lg-4">
+    <label
+    style="padding-top: 0 !important"
+    for="filter"
+    class="col-form-label"
+    >Filter</label
+    >
+    <input
+    id="filter"
+    type="text"
+    class="form-control form-control-sm"
+    placeholder="Filter"
+    />
+    </div>
+    <div class="col-md-12 col-lg-4">
+    <label
+    style="padding-top: 0 !important"
+    for="groups-select"
+    class="col-form-label"
+    >Groups</label
+    >
+    <select
+    class="form-select form-control-sm"
+    id="groups-select"
+    aria-label="Select"
+    >
+    <option selected>Groups</option>
+    <option value="1">Active</option>
+    <option value="2">Inactive</option>
+    <option value="3">VIP</option>
+    <option value="4">Budget</option>
+    <option value="5">Wholesaler</option>
+    </select>
+    </div>
+    </div>
+    </form>
+    </div>
+*@
+<div class="row">
+    <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+        <div class="card-header mt-10 customer-form__inner row align-items-center">
+            <select class="form-select col" aria-label="Page Select">
+                <option selected value="5">Page</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="100">100</option>
+                <option value="">All</option>
+            </select>
+            <div class="btn-group col">
+                <button
+                    class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                    Export
+                </button>
+                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center">
+                    <i class="fa-regular fa-plus"></i> New
+                </button>
+                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                    id="refresh-btn">
+                    <i class="fas fa-sync"></i>
+                </button>
+                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                    id="refresh-btn">
+                    <i class="fa fa-filter"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-row-dashed table-row-gray-300 gy-7 align-items-center">
+                    <thead>
+                        <tr class="fw-bold fs-6 text-gray-800">
+                            <th>
+                                <label><input type="checkbox" /></label>
+                            </th>
+                            <th>#</th>
+                            <th>Subscription Name</th>
+                            <th>Customer</th>
+                            <th>Project</th>
+                            <th>Status</th>
+                            <th>Next Billing Cycle</th>
+                            <th>Date Subscribed</th>
+                            <th>Last Sent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox" /></label>
+                            </th>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Tiger Nixon</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked />
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        VIP
+                                    </div>
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
+                                    </div>
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
+                      position: absolute;
+                      inset: 0px 0px auto auto;
+                      margin: 0px;
+                      transform: translate3d(-0.5px, 37px, 0px);
+                    " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox" /></label>
+                            </th>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Tiger Nixon</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked />
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        VIP
+                                    </div>
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
+                                    </div>
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
+                      position: absolute;
+                      inset: 0px 0px auto auto;
+                      margin: 0px;
+                      transform: translate3d(-0.5px, 37px, 0px);
+                    " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox" /></label>
+                            </th>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Tiger Nixon</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked />
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        VIP
+                                    </div>
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
+                                    </div>
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
+                      position: absolute;
+                      inset: 0px 0px auto auto;
+                      margin: 0px;
+                      transform: translate3d(-0.5px, 37px, 0px);
+                    " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox" /></label>
+                            </th>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Tiger Nixon</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked />
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        VIP
+                                    </div>
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
+                                    </div>
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
+                      position: absolute;
+                      inset: 0px 0px auto auto;
+                      margin: 0px;
+                      transform: translate3d(-0.5px, 37px, 0px);
+                    " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row pt-5 mx-auto">
+                <div
+                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <div class="row mx-2 align-items-center flex-column pb-5 text-center">
+                        Toplam 48630 Kayıttan
+                        <input value="1" style="scale:0.8; max-width: 100px;" type="text" class="form-control col mx-3"
+                            wfd-id="id38">
+                        arası gösteriliyor
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                    <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled"
+                                id="kt_ecommerce_products_table_previous">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="1">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="1" class="page-link pager-page active">1</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="2" class="page-link pager-page ">2</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="3" class="page-link pager-page ">3</a>
+                            </li>
+                            <li class="paginate_button page-item next ">
+                                <a class="page-link pager-page" href="#" page="2">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item">
+                                <a class="page-link pager-page" href="#" page="4863">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section styles{
+<link href="~/css/customer.css" rel="stylesheet" />
+}
+@section scripts{
+<!--begin::Custom Javascript(used for this page only)-->
+<script src="assets/js/custom/apps/customers/list/export.js"></script>
+<script src="assets/js/custom/apps/customers/list/list.js"></script>
+<script src="assets/js/custom/apps/customers/add.js"></script>
+<script src="assets/js/widgets.bundle.js"></script>
+<script src="assets/js/custom/widgets.js"></script>
+<script src="assets/js/custom/apps/chat/chat.js"></script>
+<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+<!--end::Custom Javascript-->
+}

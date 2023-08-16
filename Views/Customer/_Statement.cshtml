@@ -1,0 +1,150 @@
+@{
+    Layout = null;
+}
+<div class="row mx-auto">
+    <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
+        <h2>Statement</h2>
+    </div>
+    <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+        <div class="card-header mt-5 customer-form__inner row align-items-center">
+            <div class="row pb-3 mx-auto pt-5 align-items-center">
+                <select style="max-width: 300px !important; height:43px;" class="form-select col fs-7"
+                    aria-label="Page Select">
+                    <option selected="" value="this-month">This Month</option>
+                    <option value="today">Today</option>
+                    <option value="this-week">This week</option>
+                    <option value="this-month">This month</option>
+                    <option value="all">All</option>
+                </select>
+                <div class="btn-group col px-0">
+                    <button
+                        class="btn btn-light customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                        <i style="font-size: 18px; cursor:pointer;" class="fa fa-print"></i>
+                    </button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i style="font-size: 18px; cursor:pointer;" class="fa-regular fa-file-pdf"></i>
+                    </button>
+
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i style="font-size: 18px; cursor:pointer;" class="fa-regular fa-envelope"></i>
+                    </button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-row-gray-300 gy-7 align-items-center">
+                    <thead>
+                        <tr class="fw-bold fs-6 text-gray-800">
+                            <th>Date</th>
+                            <th>Details</th>
+                            <th>Amount</th>
+                            <th>Payments</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-dark">2023-08-01</td>
+                            <td class="text-dark">Beginning Balance</td>
+                            <td class="text-dark">
+                                0.00 </td>
+                            <td class="text-dark"></td>
+                            <td class="text-dark">
+                                0.00 </td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">2023-08-10</td>
+                            <td class="text-dark">
+                                Invoice <a href="#" target="_blank">INV-000012</a> - due on 2023-09-09 </td>
+                            <td class="text-dark">
+                                2,490.00 </td>
+                            <td class="text-dark">
+                            </td>
+                            <td class="text-dark">
+                                2,490.00 </td>
+                        </tr>
+                        <tr>
+                            <td class="text-dark">2023-08-16</td>
+                            <td class="text-dark">
+                                Payment (<a href="#" target="_blank">#7</a>) to invoice INV-000012 </td>
+                            <td class="text-dark">
+                            </td>
+                            <td class="text-dark">
+                                660.00 </td>
+                            <td class="text-dark">
+                                1,830.00 </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="statement_tfoot">
+                        <tr>
+                            <td colspan="3" style="text-align: right;" class="text-dark">
+                                <b>Balance Due</b>
+                            </td>
+                            <td colspan="2" style="text-align: right;">
+                                <b class="text-right">$1,830.00</b>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="row pt-5 mx-auto">
+                <div
+                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <div class="row mx-2 align-items-center flex-column pb-5 text-center">
+                        Toplam 48630 Kayıttan
+                        <input value="1" style="scale:0.8; max-width: 100px;" type="text" class="form-control col mx-3"
+                            wfd-id="id38">
+                        arası gösteriliyor
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                    <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled"
+                                id="kt_ecommerce_products_table_previous">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="1">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="1" class="page-link pager-page active">1</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="2" class="page-link pager-page ">2</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="3" class="page-link pager-page ">3</a>
+                            </li>
+                            <li class="paginate_button page-item next ">
+                                <a class="page-link pager-page" href="#" page="2">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item">
+                                <a class="page-link pager-page" href="#" page="4863">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

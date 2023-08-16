@@ -1,0 +1,98 @@
+/* _content/CrmTemplate/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-dxlwp0tdue] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-dxlwp0tdue] {
+  color: #0077cc;
+}
+
+.btn-primary[b-dxlwp0tdue] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-dxlwp0tdue], .nav-pills .show > .nav-link[b-dxlwp0tdue] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-dxlwp0tdue] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-dxlwp0tdue] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-dxlwp0tdue] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-dxlwp0tdue] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-dxlwp0tdue] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/CrmTemplate/Views/Shared/_Layout.cshtml.rz.scp.css */
+
+
+a.navbar-brand[b-hgpxrrze86] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-hgpxrrze86] {
+  color: #0077cc;
+}
+
+.btn-primary[b-hgpxrrze86] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-hgpxrrze86], .nav-pills .show > .nav-link[b-hgpxrrze86] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-hgpxrrze86] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-hgpxrrze86] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-hgpxrrze86] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-hgpxrrze86] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-hgpxrrze86] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+

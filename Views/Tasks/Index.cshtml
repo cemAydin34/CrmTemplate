@@ -1,0 +1,446 @@
+<div class="row">
+    <div class="card shadow-sm customers-summary col-11 mx-auto mobile-margin-top visible-sm">
+        <div class="card-header">
+            <h3 class="card-title">Customers Summary</h3>
+        </div>
+        <div class="card-body py-5">
+            <div class="row pt-5 align-items-center">
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p><span class="h2 me-3">1</span>Open</p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-success">
+                        <span class="h2 me-3">14</span>In Progress
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-danger">
+                        <span class="h2 me-3">1</span>Testing
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-info">
+                        <span class="h2 me-3">14</span>Awaiting Feedback
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-danger">
+                        <span class="h2 me-3">0</span>Complete
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-muted">
+                        <span class="h2 me-3">3</span>Not Started
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+        <div class="card-header mt-10 customer-form__inner row align-items-center">
+            <select class="form-select col" aria-label="Page Select">
+                <option selected value="5">Page</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="100">100</option>
+                <option value="">All</option>
+            </select>
+            <div class="btn-group col">
+                <button
+                    class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                    Export
+                </button>
+                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center">
+                    <i class="fa-regular fa-plus"></i> New
+                </button>
+                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                    id="refresh-btn">
+                    <i class="fas fa-sync"></i>
+                </button>
+                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                    id="refresh-btn">
+                    <i class="fa fa-filter"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-row-dashed table-row-gray-300 gy-7 align-items-center">
+                    <thead>
+                        <tr class="fw-bold fs-6 text-gray-800">
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Start Date</th>
+                            <th>Due Date</th>
+                            <th>Assigned to</th>
+                            <th>Tags</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Build Website</a>
+                                <div class="row-options">
+                                    <a class="text-success" href="#">Start Timer</a>
+                                    <a href="#">Edit</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="status-badge"
+                                            style="color:#64748b;border:1px solid #c1c7d1;background: #f9fafb;"
+                                            class="badge">In Progress</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('Not Started')">Not
+                                                Started</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('In Progress')">In
+                                                Progress</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('On Hold')">On
+                                                Hold</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="updateStatus('Cancelled')">Cancelled</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="updateStatus('Finished')">Finished</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                2023-08-14
+                            </td>
+                            <td>
+                                2023-08-28
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-1.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-2.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-3.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px">
+                                        <span class="symbol-label bg-light-danger text-danger fw-bolder">3+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge badge-success">Success</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="status-badge" style="border:1px solid #c1c7d1;background: #f9fafb;"
+                                            class="badge text-danger">Urgent</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item text-success" href="#">Low</a></li>
+                                        <li><a class="dropdown-item text-warning" href="#">Medium</a></li>
+                                        <li><a class="dropdown-item text-danger" href="#">Urgent</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Build Website</a>
+                                <div class="row-options">
+                                    <a class="text-success" href="#">Start Timer</a>
+                                    <a href="#">Edit</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="status-badge"
+                                            style="color:#64748b;border:1px solid #c1c7d1;background: #f9fafb;"
+                                            class="badge">In Progress</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('Not Started')">Not
+                                                Started</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('In Progress')">In
+                                                Progress</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('On Hold')">On
+                                                Hold</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="updateStatus('Cancelled')">Cancelled</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="updateStatus('Finished')">Finished</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                2023-08-14
+                            </td>
+                            <td>
+                                2023-08-28
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-1.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-2.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-3.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px">
+                                        <span class="symbol-label bg-light-danger text-danger fw-bolder">3+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge badge-success">Success</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="status-badge" style="border:1px solid #c1c7d1;background: #f9fafb;"
+                                            class="badge text-danger">Urgent</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item text-success" href="#">Low</a></li>
+                                        <li><a class="dropdown-item text-warning" href="#">Medium</a></li>
+                                        <li><a class="dropdown-item text-danger" href="#">Urgent</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Build Website</a>
+                                <div class="row-options">
+                                    <a class="text-success" href="#">Start Timer</a>
+                                    <a href="#">Edit</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="status-badge"
+                                            style="color:#64748b;border:1px solid #c1c7d1;background: #f9fafb;"
+                                            class="badge">In Progress</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('Not Started')">Not
+                                                Started</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('In Progress')">In
+                                                Progress</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('On Hold')">On
+                                                Hold</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="updateStatus('Cancelled')">Cancelled</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="updateStatus('Finished')">Finished</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                2023-08-14
+                            </td>
+                            <td>
+                                2023-08-28
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-1.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-2.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-3.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px">
+                                        <span class="symbol-label bg-light-danger text-danger fw-bolder">3+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge badge-success">Success</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="status-badge" style="border:1px solid #c1c7d1;background: #f9fafb;"
+                                            class="badge text-danger">Urgent</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item text-success" href="#">Low</a></li>
+                                        <li><a class="dropdown-item text-warning" href="#">Medium</a></li>
+                                        <li><a class="dropdown-item text-danger" href="#">Urgent</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Build Website</a>
+                                <div class="row-options">
+                                    <a class="text-success" href="#">Start Timer</a>
+                                    <a href="#">Edit</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="status-badge"
+                                            style="color:#64748b;border:1px solid #c1c7d1;background: #f9fafb;"
+                                            class="badge">In Progress</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('Not Started')">Not
+                                                Started</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('In Progress')">In
+                                                Progress</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="updateStatus('On Hold')">On
+                                                Hold</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="updateStatus('Cancelled')">Cancelled</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="updateStatus('Finished')">Finished</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                2023-08-14
+                            </td>
+                            <td>
+                                2023-08-28
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-1.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-2.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px me-3">
+                                        <img src="assets/media/avatars/300-3.jpg" alt="" />
+                                    </div>
+                                    <div class="symbol symbol-35px">
+                                        <span class="symbol-label bg-light-danger text-danger fw-bolder">3+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge badge-success">Success</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="status-badge" style="border:1px solid #c1c7d1;background: #f9fafb;"
+                                            class="badge text-danger">Urgent</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item text-success" href="#">Low</a></li>
+                                        <li><a class="dropdown-item text-warning" href="#">Medium</a></li>
+                                        <li><a class="dropdown-item text-danger" href="#">Urgent</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row pt-5 mx-auto">
+                <div
+                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <div class="row mx-2 align-items-center flex-column pb-5 text-center">
+                        Toplam 48630 Kayıttan
+                        <input value="1" style="scale:0.8; max-width: 100px;" type="text" class="form-control col mx-3"
+                            wfd-id="id38">
+                        arası gösteriliyor
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                    <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled"
+                                id="kt_ecommerce_products_table_previous">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="1">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="1" class="page-link pager-page active">1</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="2" class="page-link pager-page ">2</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="3" class="page-link pager-page ">3</a>
+                            </li>
+                            <li class="paginate_button page-item next ">
+                                <a class="page-link pager-page" href="#" page="2">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item">
+                                <a class="page-link pager-page" href="#" page="4863">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section styles{
+<link href="~/css/customer.css" rel="stylesheet" />
+}
+@section scripts{
+<!--begin::Custom Javascript(used for this page only)-->
+<script src="assets/js/custom/apps/customers/list/export.js"></script>
+<script src="assets/js/custom/apps/customers/list/list.js"></script>
+<script src="assets/js/custom/apps/customers/add.js"></script>
+<script src="assets/js/widgets.bundle.js"></script>
+<script src="assets/js/custom/widgets.js"></script>
+<script src="assets/js/custom/apps/chat/chat.js"></script>
+<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+<!--end::Custom Javascript-->
+
+<script>
+    function updateStatus(status) {
+        document.getElementById("status-badge").innerHTML = status;
+    }
+</script>
+
+}

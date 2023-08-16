@@ -1,0 +1,211 @@
+<div class="row mx-0">
+    <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+        <div class="card-header mt-5 customer-form__inner row align-items-center">
+            <div class="mt-5 gy-5 row justify-content-between align-items-center mx-auto px-0">
+                <a class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center col"
+                    href="#">
+                    <i class="fa-regular fa-plus"></i>
+                    New Credit Note
+                </a>
+            </div>
+            <div class="row my-5 px-0 mx-auto">
+                <div class="col px-0">
+                    <select class="form-select" aria-label="Page Select">
+                        <option selected="" value="5">Page</option>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="100">100</option>
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div class="btn-group col px-0 ms-auto">
+                    <button
+                        class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">Export</button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i class="fas fa-sync"></i>
+                    </button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center">
+                        <i class="fa fa-angle-double-left"></i>
+                    </button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-row-dashed table-row-gray-300 gy-7 align-items-center">
+                    <thead>
+                        <tr class="fw-bold fs-6 text-gray-800">
+                            <th>Credit Note #</th>
+                            <th>Credit Note Date</th>
+                            <th>Customer</th>
+                            <th>Status</th>
+                            <th>Project</th>
+                            <th>Reference #</th>
+                            <th>Amount</th>
+                            <th>Remaining Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#">PRO-000005</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="text-dark">123 Smith Street Sales Campaign</span>
+                            </td>
+                            <td>
+                                <span class="text-dark">Shanahan LLCs</span>
+                            </td>
+                            <td class="text-dark">$31,500.00</td>
+                            <td class="text-dark">2023-08-11</td>
+                            <td class="text-dark">2023-08-18</td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span class="badge badge-light-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">PRO-000005</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="text-dark">123 Smith Street Sales Campaign</span>
+                            </td>
+                            <td>
+                                <span class="text-dark">Shanahan LLCs</span>
+                            </td>
+                            <td class="text-dark">$31,500.00</td>
+                            <td class="text-dark">2023-08-11</td>
+                            <td class="text-dark">2023-08-18</td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span class="badge badge-light-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">PRO-000005</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="text-dark">123 Smith Street Sales Campaign</span>
+                            </td>
+                            <td>
+                                <span class="text-dark">Shanahan LLCs</span>
+                            </td>
+                            <td class="text-dark">$31,500.00</td>
+                            <td class="text-dark">2023-08-11</td>
+                            <td class="text-dark">2023-08-18</td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span class="badge badge-light-success">Active</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">PRO-000005</a>
+                                <div class="row-options">
+                                    <a href="#">View</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="text-dark">123 Smith Street Sales Campaign</span>
+                            </td>
+                            <td>
+                                <span class="text-dark">Shanahan LLCs</span>
+                            </td>
+                            <td class="text-dark">$31,500.00</td>
+                            <td class="text-dark">2023-08-11</td>
+                            <td class="text-dark">2023-08-18</td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <span class="badge badge-light-success">Active</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row pt-5 mx-auto">
+                <div
+                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <div class="row mx-2 align-items-center flex-column pb-5 text-center">
+                        Toplam 48630 Kayıttan
+                        <input value="1" style="scale:0.8; max-width: 100px;" type="text" class="form-control col mx-3"
+                            wfd-id="id38">
+                        arası gösteriliyor
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                    <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled"
+                                id="kt_ecommerce_products_table_previous">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="1">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="1" class="page-link pager-page active">1</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="2" class="page-link pager-page ">2</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="3" class="page-link pager-page ">3</a>
+                            </li>
+                            <li class="paginate_button page-item next ">
+                                <a class="page-link pager-page" href="#" page="2">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item">
+                                <a class="page-link pager-page" href="#" page="4863">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section styles{
+<link href="~/css/customer.css" rel="stylesheet" />
+}

@@ -1,0 +1,132 @@
+@{
+    Layout = null;
+}
+<div class="row mx-auto">
+    <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
+        <h2>Contacts</h2>
+    </div>
+    <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+        <div class="card-header mt-10 customer-form__inner row align-items-center">
+            <a class="btn btn-primary mb-5 customer-details-btn d-flex align-items-center" href="#">
+                <i class="fa-regular fa-plus tw-mr-1"></i>
+                New Contact
+            </a>
+            <div class="row pb-3">
+                <select class="form-select col" aria-label="Page Select">
+                    <option selected="" value="5">Page</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="100">100</option>
+                    <option value="">All</option>
+                </select>
+                <div class="btn-group col">
+                    <button
+                        class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">Export</button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i class="fas fa-sync"></i>
+                    </button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-row-dashed table-row-gray-300 gy-7 align-items-center">
+                    <thead>
+                        <tr class="fw-bold fs-6 text-gray-800">
+                            <th>
+                                <label><input type="checkbox" wfd-id="id19"></label>
+                            </th>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Position</th>
+                            <th>Phone</th>
+                            <th>Active</th>
+                            <th>Last Login</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox" wfd-id="id20"></label>
+                            </th>
+                            <td>1</td>
+                            <td>
+                                <a href="#">Tiger Nixon</a>
+                                <div class="row-options">
+                                    <a href="#">Edit</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked="" wfd-id="id21">
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>03-08-2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row pt-5">
+                <div
+                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <div class="row mx-2 align-items-center flex-column pb-5">
+                        Toplam 48630 Kayıttan
+                        <input value="1" style="scale:0.8; max-width: 100px;" type="text" class="form-control col mx-3"
+                            wfd-id="id38">
+                        arası gösteriliyor
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                    <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled"
+                                id="kt_ecommerce_products_table_previous">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="1">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="1" class="page-link pager-page active">1</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="2" class="page-link pager-page ">2</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="3" class="page-link pager-page ">3</a>
+                            </li>
+                            <li class="paginate_button page-item next ">
+                                <a class="page-link pager-page" href="#" page="2">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item">
+                                <a class="page-link pager-page" href="#" page="4863">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

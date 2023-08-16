@@ -1,0 +1,501 @@
+@{
+	Layout = null;
+}
+<div class="row mx-auto">
+	<div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
+		<h2>Profile</h2>
+	</div>
+	<div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+		<div class="card-header mt-5 customer-form__inner row align-items-center">
+			<div class="row mt-0 mx-auto gy-5">
+				<ul class="nav nav-tabs nav-line-tabs mb-0 px-5 mx-auto fs-5">
+					<li class="nav-item">
+						<a class="nav-link active" data-bs-toggle="tab" href="#kt_tab_pane_1">Customer Details</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="billing-and-shipping" data-bs-toggle="tab" href="#kt_tab_pane_2">Billing
+							$ Shipping</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="customer-admins" data-bs-toggle="tab" href="#kt_tab_pane_3">Customer
+							Admins</a>
+					</li>
+				</ul>
+
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
+						<!--begin::Modal body-->
+						<div class="modal-body py-10 px-5 mx-auto">
+							<!--begin::Scroll-->
+							<div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll" data-kt-scroll="false"
+								data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto"
+								data-kt-scroll-dependencies="#kt_modal_add_customer_header"
+								data-kt-scroll-wrappers="#kt_modal_add_customer_scroll" data-kt-scroll-offset="300px">
+								<!--begin::Input group-->
+								<div class="fv-row mb-7">
+									<!--begin::Label-->
+									<label class="required fs-6 fw-semibold mb-2">Company</label>
+									<!--end::Label-->
+									<!--begin::Input-->
+									<input type="text" class="form-control" placeholder="Conroy, Zieme and Wilkinson"
+										name="name" value="" />
+									<!--end::Input-->
+								</div>
+								<!--end::Input group-->
+								<!--begin::Input group-->
+								<div class="fv-row mb-7">
+									<!--begin::Label-->
+									<label class="fs-6 fw-semibold mb-2">
+										<span class="required">VAT Number</span>
+										<span class="ms-1">
+											<i class="ki-duotone ki-information fs-7">
+												<span class="path1"></span>
+												<span class="path2"></span>
+												<span class="path3"></span>
+											</i>
+										</span>
+									</label>
+									<!--end::Label-->
+									<!--begin::Input-->
+									<input type="text" class="form-control" placeholder="" name="email" value="" />
+									<!--end::Input-->
+								</div>
+								<!--end::Input group-->
+								<!--begin::Input group-->
+								<div class="fv-row mb-15">
+									<!--begin::Label-->
+									<label class="fs-6 fw-semibold mb-2">Phone</label>
+									<!--end::Label-->
+									<!--begin::Input-->
+									<input type="text" class="form-control" placeholder="+1 (313) 759-1556"
+										name="description" />
+									<!--end::Input-->
+								</div>
+								<!--end::Input group-->
+								<!--begin::Billing toggle-->
+								<div class="fw-bold fs-3 rotate collapsible mb-7" data-bs-toggle="collapse"
+									href="#kt_modal_add_customer_billing_info" role="button" aria-expanded="false"
+									aria-controls="kt_customer_view_details">Personal Information
+									<span class="ms-2 rotate-180">
+										<i class="ki-duotone ki-down fs-3"></i>
+									</span>
+								</div>
+								<!--end::Billing toggle-->
+								<!--begin::Billing form-->
+								<div id="kt_modal_add_customer_billing_info" class="collapse show">
+									<!--begin::Input group-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-6 fw-semibold mb-2">Address Line 1</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="address1"
+											value="101, Collins Street" />
+										<!--end::Input-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="fs-6 fw-semibold mb-2">Address Line 2</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="address2" value="" />
+										<!--end::Input-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-6 fw-semibold mb-2">Town</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="city" value="Melbourne" />
+										<!--end::Input-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="row g-9 mb-7">
+										<!--begin::Col-->
+										<div class="col-md-6 fv-row">
+											<!--begin::Label-->
+											<label class="required fs-6 fw-semibold mb-2">State / Province</label>
+											<!--end::Label-->
+											<!--begin::Input-->
+											<input class="form-control" placeholder="" name="state" value="Victoria" />
+											<!--end::Input-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-md-6 fv-row">
+											<!--begin::Label-->
+											<label class="required fs-6 fw-semibold mb-2">Post Code</label>
+											<!--end::Label-->
+											<!--begin::Input-->
+											<input class="form-control" placeholder="" name="postcode" value="3000" />
+											<!--end::Input-->
+										</div>
+										<!--end::Col-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="fs-6 fw-semibold mb-2">
+											<span class="required">Country</span>
+											<span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
+												<i class="ki-duotone ki-information fs-7">
+													<span class="path1"></span>
+													<span class="path2"></span>
+													<span class="path3"></span>
+												</i>
+											</span>
+										</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<select style="font-size: 14px; max-width:300px !important; height:43px;"
+											name="country" aria-label="Select a Country" data-control="select2 "
+											data-placeholder="Select a Country..." class="form-select">
+											<option value="">Select a Country...</option>
+											<option value="AF">Afghanistan</option>
+											<option value="AX">Aland Islands</option>
+											<option value="AL">Albania</option>
+											<option value="DZ">Algeria</option>
+											<option value="AS">American Samoa</option>
+										</select>
+										<!--end::Input-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="fv-row mb-7">
+										<!--begin::Wrapper-->
+										<div class="d-flex flex-stack">
+											<!--begin::Label-->
+											<div class="me-5">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold">Use as a billing adderess?</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<div class="fs-7 fw-semibold text-muted">If you need more info, please
+													check budget
+													planning</div>
+												<!--end::Input-->
+											</div>
+											<!--end::Label-->
+											<!--begin::Switch-->
+											<label class="form-check form-switch form-check-custom form-check-solid">
+												<!--begin::Input-->
+												<input class="form-check-input" name="billing" type="checkbox" value="1"
+													id="kt_modal_add_customer_billing" checked="checked" style="opacity: 1;" />
+												<!--end::Input-->
+												<!--begin::Label-->
+												<span class="form-check-label fw-semibold text-muted"
+													for="kt_modal_add_customer_billing">Yes</span>
+												<!--end::Label-->
+											</label>
+											<!--end::Switch-->
+
+										</div>
+
+										<!--begin::Wrapper-->
+									</div>
+									<a class="btn btn-primary">Save</a>
+									<!--end::Input group-->
+								</div>
+								<!--end::Billing form-->
+							</div>
+							<!--end::Scroll-->
+						</div>
+						<!--end::Modal body-->
+					</div>
+					<div class="tab-pane fade" id="kt_tab_pane_2" role="tabpanel">
+						<!--begin::Modal body-->
+						<div class="modal-body py-10 px-5 mx-auto">
+							<!--begin::Scroll-->
+							<div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll" data-kt-scroll="false"
+								data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto"
+								data-kt-scroll-dependencies="#kt_modal_add_customer_header"
+								data-kt-scroll-wrappers="#kt_modal_add_customer_scroll" data-kt-scroll-offset="300px">
+								<!--begin::Input group-->
+								<div class="fv-row mb-7">
+									<!--begin::Label-->
+									<label class="required fs-6 fw-semibold mb-2">Company</label>
+									<!--end::Label-->
+									<!--begin::Input-->
+									<input type="text" class="form-control" placeholder="Conroy, Zieme and Wilkinson"
+										name="name" value="" />
+									<!--end::Input-->
+								</div>
+								<!--end::Input group-->
+								<!--begin::Input group-->
+								<div class="fv-row mb-7">
+									<!--begin::Label-->
+									<label class="fs-6 fw-semibold mb-2">
+										<span class="required">VAT Number</span>
+										<span class="ms-1">
+											<i class="ki-duotone ki-information fs-7">
+												<span class="path1"></span>
+												<span class="path2"></span>
+												<span class="path3"></span>
+											</i>
+										</span>
+									</label>
+									<!--end::Label-->
+									<!--begin::Input-->
+									<input type="text" class="form-control" placeholder="" name="email" value="" />
+									<!--end::Input-->
+								</div>
+								<!--end::Input group-->
+								<!--begin::Input group-->
+								<div class="fv-row mb-15">
+									<!--begin::Label-->
+									<label class="fs-6 fw-semibold mb-2">Phone</label>
+									<!--end::Label-->
+									<!--begin::Input-->
+									<input type="text" class="form-control" placeholder="+1 (313) 759-1556"
+										name="description" />
+									<!--end::Input-->
+								</div>
+								<!--end::Input group-->
+								<!--begin::Billing toggle-->
+								<div class="fw-bold fs-3 rotate collapsible mb-7" data-bs-toggle="collapse"
+									href="#kt_modal_add_customer_billing_info" role="button" aria-expanded="false"
+									aria-controls="kt_customer_view_details">Personal Information
+									<span class="ms-2 rotate-180">
+										<i class="ki-duotone ki-down fs-3"></i>
+									</span>
+								</div>
+								<!--end::Billing toggle-->
+								<!--begin::Billing form-->
+								<div id="kt_modal_add_customer_billing_info" class="collapse show">
+
+
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-6 fw-semibold mb-2">Address Line 1</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="address1"
+											value="101, Collins Street" />
+										<!--end::Input-->
+									</div>
+
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="fs-6 fw-semibold mb-2">Address Line 2</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="address2" value="" />
+										<!--end::Input-->
+									</div>
+
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-6 fw-semibold mb-2">Town</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="city" value="Melbourne" />
+										<!--end::Input-->
+									</div>
+
+									<div class="row g-9 mb-7">
+										<!--begin::Col-->
+										<div class="col-md-6 fv-row">
+											<!--begin::Label-->
+											<label class="required fs-6 fw-semibold mb-2">State / Province</label>
+											<!--end::Label-->
+											<!--begin::Input-->
+											<input class="form-control" placeholder="" name="state" value="Victoria" />
+											<!--end::Input-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-md-6 fv-row">
+											<!--begin::Label-->
+											<label class="required fs-6 fw-semibold mb-2">Post Code</label>
+											<!--end::Label-->
+											<!--begin::Input-->
+											<input class="form-control" placeholder="" name="postcode" value="3000" />
+											<!--end::Input-->
+										</div>
+										<!--end::Col-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="fs-6 fw-semibold mb-2">
+											<span class="required">Country</span>
+											<span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
+												<i class="ki-duotone ki-information fs-7">
+													<span class="path1"></span>
+													<span class="path2"></span>
+													<span class="path3"></span>
+												</i>
+											</span>
+										</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<select name="country" aria-label="Select a Country" data-control="select2"
+											data-placeholder="Select a Country..." class="form-select fw-bold">
+											<option value="">Select a Country...</option>
+											<option value="AF">Afghanistan</option>
+											<option value="AX">Aland Islands</option>
+											<option value="AL">Albania</option>
+											<option value="DZ">Algeria</option>
+											<option value="AS">American Samoa</option>
+										</select>
+										<!--end::Input-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="alert alert-warning">
+										<div class="checkbox checkbox-default -tw-mb-0.5">
+											<input type="checkbox" name="update_all_other_transactions"
+												id="update_all_other_transactions" wfd-id="id24">
+											<label for="update_all_other_transactions">
+												Update the shipping/billing info on all previous invoices/estimates<br>
+											</label>
+										</div>
+										<p class="tw-ml-7 tw-mb-0">
+											If you check this field shipping and billing info will be updated to all
+											invoices and estimates. Note: Invoices with status paid won't be affected.
+										</p>
+										<div class="checkbox checkbox-default">
+											<input type="checkbox" name="update_credit_notes" id="update_credit_notes"
+												wfd-id="id25">
+											<label for="update_credit_notes">
+												Update the shipping/billing info on all previous credit notes (Closed
+												credit notes not affected) </label>
+										</div>
+									</div>
+									<!--end::Input group-->
+								</div>
+								<!--end::Billing form-->
+							</div>
+							<!--end::Scroll-->
+						</div>
+						<!--end::Modal body-->
+					</div>
+					<div class="tab-pane fade" id="kt_tab_pane_3" role="tabpanel">
+						<div class="row mx-auto">
+							<div class="card col-12 mb-10 mt-5">
+								<div class="card-header mt-5 customer-form__inner row align-items-center">
+									<div class="row mt-0 mx-auto gy-5">
+										<a class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center me-5"
+											href="#">
+
+											Assign Admin
+										</a>
+									</div>
+
+									<div class="row py-5 mx-auto">
+										<select class="form-select col" aria-label="Page Select">
+											<option selected="" value="5">Page</option>
+											<option value="10">10</option>
+											<option value="25">25</option>
+											<option value="100">100</option>
+											<option value="">All</option>
+										</select>
+										<div class="btn-group col px-0">
+											<button
+												class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">Export</button>
+											<button
+												class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+												id="refresh-btn">
+												<i class="fas fa-sync"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="table-responsive">
+										<table
+											class="table table-row-dashed table-row-gray-300 gy-7 align-items-center">
+											<thead>
+												<tr class="fw-bold fs-6 text-gray-800">
+													<th>Staff Member</th>
+													<th>Data Assigned</th>
+													<th>Options</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<a href="#">Zion Gerlach</a>
+													</td>
+													<td>
+														<span class="text-dark">2023-08-10 03:20:59</span>
+													</td>
+													<td>
+														<i style="cursor:pointer; width: 26px; height: 26px; font-size: 18px;"
+															class="fas fa-trash-alt"></i>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="row pt-5 mx-auto">
+										<div
+											class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+											<div class="row mx-2 align-items-center flex-column pb-5 text-center">
+												Toplam 48630 Kayıttan
+												<input value="1" style="scale:0.8; max-width: 100px;" type="text"
+													class="form-control col mx-3" wfd-id="id38">
+												arası gösteriliyor
+											</div>
+										</div>
+										<div
+											class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+											<div class="dataTables_paginate paging_simple_numbers"
+												id="kt_ecommerce_products_table_paginate">
+												<ul class="pagination">
+													<li class="paginate_button page-item previous disabled"
+														id="kt_ecommerce_products_table_previous">
+														<a href="#" aria-controls="kt_ecommerce_products_table"
+															class="page-link pager-page" page="1">
+															<i class="fa-solid fa-angles-left"></i>
+														</a>
+													</li>
+													<li class="paginate_button page-item">
+														<a href="#" aria-controls="kt_ecommerce_products_table"
+															class="page-link pager-page" page="0">
+															<i class="fa-solid fa-angle-left"></i>
+														</a>
+													</li>
+													<li class="paginate_button page-item">
+														<a href="#" page="1" class="page-link pager-page active">1</a>
+													</li>
+													<li class="paginate_button page-item">
+														<a href="#" page="2" class="page-link pager-page ">2</a>
+													</li>
+													<li class="paginate_button page-item">
+														<a href="#" page="3" class="page-link pager-page ">3</a>
+													</li>
+													<li class="paginate_button page-item next ">
+														<a class="page-link pager-page" href="#" page="2">
+															<i class="fa-solid fa-angle-right"></i>
+														</a>
+													</li>
+
+													<li class="paginate_button page-item">
+														<a class="page-link pager-page" href="#" page="4863">
+															<i class="fa-solid fa-angles-right"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+</div>
