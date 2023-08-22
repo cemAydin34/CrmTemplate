@@ -1,0 +1,153 @@
+<div class="row mx-auto">
+    <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
+        <h2>Import Customers</h2>
+    </div>
+    <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+        <div class="card-header mt-0 row align-items-center">
+            <div class="col-sm-12 col-md-3 px-0">
+                <button class="btn btn-sm btn-success d-flex align-items-center justify-content-center">Download
+                    Sample
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive no-dt">
+                <table class="table table-hover table-bordered no-mtop">
+                    <thead>
+                        <tr>
+                            <th class="bold database_field_firstname" style="white-space: nowrap;"><span
+                                    class="text-danger">*</span> Firstname<br><span class="text-info">Contact
+                                    field</span></th>
+                            <th class="bold database_field_lastname" style="white-space: nowrap;"><span
+                                    class="text-danger">*</span>
+                                Lastname<br><span class="text-info">Contact field</span></th>
+                            <th class="bold database_field_email" style="white-space: nowrap;"><span
+                                    class="text-danger">*</span>
+                                Email<br><span class="text-info">Contact field</span></th>
+                            <th class="bold database_field_contact_phonenumber" style="white-space: nowrap;">Contact
+                                phonenumber<br><span class="text-info">Contact field</span></th>
+                            <th class="bold database_field_title" style="white-space: nowrap;">Position<br><span
+                                    class="text-info">Contact field</span></th>
+                            <th class="bold database_field_company" style="white-space: nowrap;"><span
+                                    class="text-danger">*</span>
+                                Company</th>
+                            <th class="bold database_field_vat" style="white-space: nowrap;">Vat</th>
+                            <th class="bold database_field_phonenumber" style="white-space: nowrap;">Phonenumber</th>
+                            <th class="bold database_field_country" style="white-space: nowrap;">Country</th>
+                            <th class="bold database_field_city" style="white-space: nowrap;">City</th>
+                            <th class="bold database_field_zip" style="white-space: nowrap;">Zip</th>
+                            <th class="bold database_field_state" style="white-space: nowrap;">State</th>
+                            <th class="bold database_field_address" style="white-space: nowrap;">Address</th>
+                            <th class="bold database_field_website" style="white-space: nowrap;">Website</th>
+                            <th class="bold database_field_billing_street" style="white-space: nowrap;">Billing street
+                            </th>
+                            <th class="bold database_field_billing_city" style="white-space: nowrap;">Billing city</th>
+                            <th class="bold database_field_billing_state" style="white-space: nowrap;">Billing state
+                            </th>
+                            <th class="bold database_field_billing_zip" style="white-space: nowrap;">Billing zip</th>
+                            <th class="bold database_field_billing_country" style="white-space: nowrap;">Billing country
+                            </th>
+                            <th class="bold database_field_shipping_street" style="white-space: nowrap;">Shipping street
+                            </th>
+                            <th class="bold database_field_shipping_city" style="white-space: nowrap;">Shipping city
+                            </th>
+                            <th class="bold database_field_shipping_state" style="white-space: nowrap;">Shipping state
+                            </th>
+                            <th class="bold database_field_shipping_zip" style="white-space: nowrap;">Shipping zip</th>
+                            <th class="bold database_field_shipping_country" style="white-space: nowrap;">Shipping
+                                country</th>
+                            <th class="bold database_field_longitude" style="white-space: nowrap;">Longitude</th>
+                            <th class="bold database_field_latitude" style="white-space: nowrap;">Latitude</th>
+                            <th class="bold database_field_stripe_id" style="white-space: nowrap;">Stripe id</th>
+                            <th class="bold custom_field_1">Ma Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">64e34cf138e7c@example.com</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                            <td class="text-dark">Sample Data</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row pt-5 pb-3 gy-5">
+                <div class="col-sm-12 col-md-4 form-group">
+                    <label for="formFile" class="form-label">Choose CSV File</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="col-sm-12 col-md-4 form-group">
+                    <label for="form-select" class="form-label">Groups</label>
+                    <select class="form-select" id="form-select" aria-label="Default select example">
+                        <option selected>Nothing is selected</option>
+                        <option value="High Budget">High Budget</option>
+                        <option value="Low Budget">Low Budget</option>
+                        <option value="Vip">Vip</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-4 form-group">
+                    <label class="form-label" for="default-password">Default password for all contacts</label>
+                    <input type="text" class="form-control" id="default-password">
+                </div>
+                <!-- add a btn -->
+                <div class="row gy-3">
+                    <button
+                        class="col-sm-12 col-md-2 btn btn-sm btn-success d-flex align-items-center justify-content-center me-5">Import</button>
+                    <button
+                        class="col-sm-12 col-md-2 btn btn-sm btn-primary d-flex align-items-center justify-content-center">Simulate
+                        Import</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section styles{
+<link href="~/css/customer.css" rel="stylesheet" />
+}
+
+@section scripts{
+<!--begin::Vendors Javascript(used for this page only)-->
+<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<!--end::Vendors Javascript-->
+<!--begin::Custom Javascript(used for this page only)-->
+<script src="assets/js/custom/pages/user-profile/general.js"></script>
+<script src="assets/js/widgets.bundle.js"></script>
+<script src="assets/js/custom/widgets.js"></script>
+<script src="assets/js/custom/apps/chat/chat.js"></script>
+<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/type.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/details.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/finance.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/complete.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/main.js"></script>
+<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+<!--end::Custom Javascript-->
+}

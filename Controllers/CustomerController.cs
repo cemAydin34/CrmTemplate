@@ -15,6 +15,11 @@ namespace CrmTemplate.Controllers
             return View();
         }
 
+        public IActionResult Import()
+        {
+            return View();
+        }
+
         // Partial Views
 
         public IActionResult _Profile()
@@ -99,6 +104,7 @@ namespace CrmTemplate.Controllers
         {
             return View();
         }
+
 
     }
 }

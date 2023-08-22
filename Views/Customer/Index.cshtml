@@ -1,84 +1,620 @@
-﻿
-
-
-@*     <div class="row">
-         <div class="customers-buttons col-11 my-5 mx-auto px-0">
-            <a href="#" class="btn btn-primary">
-                <i class="fa-regular fa-plus tw-mr-1"></i>
-                New Customer
-                </a>
-            <a href="#" class="btn btn-primary">
-                <i class="fa-solid fa-upload tw-mr-1"></i>
-                Import Customer
-            </a>
-            <a href="#" class="btn btn-secondary">
-                <i class="fa-regular fa-user tw-mr-1"></i>
-                Contacts
-            </a>
-         </div>
-    </div> *@
-    
-    <div class="row">
-        <div class="card shadow-sm customers-summary col-11 mx-auto mobile-margin-top visible-sm">
-            <div class="card-header">
-                <h3 class="card-title">Customers Summary</h3>
+﻿<!--begin::Modal - New Customer-->
+<div class="modal fade" id="kt_modal_new_customer" tabindex="-1" aria-hidden="true">
+    <!--begin::Modal dialog-->
+    <div class="modal-dialog modal-dialog-centered mw-700px">
+        <!--begin::Modal content-->
+        <div class="modal-content">
+            <!--begin::Modal header-->
+            <div class="modal-header pb-0 border-0 justify-content-end">
+                <!--begin::Close-->
+                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                    <i class="ki-duotone ki-cross fs-1">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                    </i>
+                </div>
+                <!--end::Close-->
             </div>
-            <div class="card-body py-5">
-                <div class="row pt-5 align-items-center">
-                    <div
-                        class="col-lg-2 col-4 px-5 customers-summary__row-titles"
-                    >
-                        <p><span class="h2 me-3">15</span>Total Customers</p>
-                    </div>
-                    <div
-                        class="col-lg-2 col-4 px-5 customers-summary__row-titles"
-                    >
-                        <p class="text-success">
-                            <span class="h2 me-3">14</span>Active Customers
-                        </p>
-                    </div>
-                    <div
-                        class="col-lg-2 col-4 px-5 customers-summary__row-titles"
-                    >
-                        <p class="text-danger">
-                            <span class="h2 me-3">1</span>Inactive Customers
-                        </p>
-                    </div>
-                    <div
-                        class="col-lg-2 col-4 px-5 customers-summary__row-titles"
-                    >
-                        <p class="text-info">
-                            <span class="h2 me-3">14</span>Active Contacts
-                        </p>
-                    </div>
-                    <div
-                        class="col-lg-2 col-4 px-5 customers-summary__row-titles"
-                    >
-                        <p class="text-danger">
-                            <span class="h2 me-3">0</span>Inactive Contacts
-                        </p>
-                    </div>
-                    <div
-                        class="col-lg-2 col-4 px-5 customers-summary__row-titles"
-                    >
-                        <p class="text-muted">
-                            <span class="h2 me-3">3</span>Contacts Logged In
-                        </p>
+            <div class="row-fluid modal-body pt-0">
+                <!--                 <div class=" d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
+                    <h2>Add a new customer</h2>
+                </div> -->
+                <div class="col-12 m-0">
+                    <div class="mt-0 pt-0 customer-form__inner row align-items-center">
+                        <div class="row mt-0 mx-auto gy-5">
+                            <ul class="nav nav-tabs nav-line-tabs mb-0 px-5 mx-auto fs-5">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#kt_tab_pane_1">Customer
+                                        Details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="billing-and-shipping" data-bs-toggle="tab"
+                                        href="#kt_tab_pane_2">Billing
+                                        $ Shipping</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="customer-admins" data-bs-toggle="tab"
+                                        href="#kt_tab_pane_3">Custom
+                                        Field</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
+                                    <!--begin::Modal body-->
+                                    <div class="modal-body py-10 px-5 mx-auto">
+                                        <!--begin::Scroll-->
+                                        <div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll"
+                                            data-kt-scroll="false" data-kt-scroll-activate="{default: false, lg: true}"
+                                            data-kt-scroll-max-height="auto"
+                                            data-kt-scroll-dependencies="#kt_modal_add_customer_header"
+                                            data-kt-scroll-wrappers="#kt_modal_add_customer_scroll"
+                                            data-kt-scroll-offset="300px">
+                                            <!--begin::Input group-->
+                                            <div class="fv-row mb-7">
+                                                <!--begin::Label-->
+                                                <label class="required fs-6 fw-semibold mb-2">Company</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control"
+                                                    placeholder="Conroy, Zieme and Wilkinson" name="name" value="" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Input group-->
+                                            <div class="fv-row mb-7">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">
+                                                    <span class="required">VAT Number</span>
+                                                    <span class="ms-1">
+                                                        <i class="ki-duotone ki-information fs-7">
+                                                            <span class="path1"></span>
+                                                            <span class="path2"></span>
+                                                            <span class="path3"></span>
+                                                        </i>
+                                                    </span>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control" placeholder="" name="email"
+                                                    value="" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Input group-->
+                                            <div class="fv-row mb-15">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">Phone</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control" placeholder="+1 (313) 759-1556"
+                                                    name="description" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Billing toggle-->
+                                            <div class="fw-bold fs-3 rotate collapsible mb-7" data-bs-toggle="collapse"
+                                                href="#kt_modal_add_customer_billing_info" role="button"
+                                                aria-expanded="false" aria-controls="kt_customer_view_details">Personal
+                                                Information
+                                                <span class="ms-2 rotate-180">
+                                                    <i class="ki-duotone ki-down fs-3"></i>
+                                                </span>
+                                            </div>
+                                            <!--end::Billing toggle-->
+                                            <!--begin::Billing form-->
+                                            <div id="kt_modal_add_customer_billing_info" class="collapse show">
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-semibold mb-2">Address Line 1</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" placeholder="" name="address1"
+                                                        value="101, Collins Street" />
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-semibold mb-2">Address Line 2</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" placeholder="" name="address2"
+                                                        value="" />
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-semibold mb-2">Town</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" placeholder="" name="city"
+                                                        value="Melbourne" />
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="row g-9 mb-7">
+                                                    <!--begin::Col-->
+                                                    <div class="col-md-6 fv-row px-0">
+                                                        <!--begin::Label-->
+                                                        <label class="required fs-6 fw-semibold mb-2">State /
+                                                            Province</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Input-->
+                                                        <input class="form-control" placeholder="" name="state"
+                                                            value="Victoria" />
+                                                        <!--end::Input-->
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col-md-6 fv-row">
+                                                        <!--begin::Label-->
+                                                        <label class="required fs-6 fw-semibold mb-2">Post Code</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Input-->
+                                                        <input class="form-control" placeholder="" name="postcode"
+                                                            value="3000" />
+                                                        <!--end::Input-->
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-semibold mb-2">
+                                                        <span class="required">Country</span>
+                                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                                            title="Country of origination">
+                                                            <i class="ki-duotone ki-information fs-7">
+                                                                <span class="path1"></span>
+                                                                <span class="path2"></span>
+                                                                <span class="path3"></span>
+                                                            </i>
+                                                        </span>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <select
+                                                        style="font-size: 14px; max-width:300px !important; height:43px;"
+                                                        name="country" aria-label="Select a Country"
+                                                        data-control="select2 " data-placeholder="Select a Country..."
+                                                        class="form-select">
+                                                        <option value="">Select a Country...</option>
+                                                        <option value="AF">Afghanistan</option>
+                                                        <option value="AX">Aland Islands</option>
+                                                        <option value="AL">Albania</option>
+                                                        <option value="DZ">Algeria</option>
+                                                        <option value="AS">American Samoa</option>
+                                                    </select>
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7">
+                                                    <!--begin::Wrapper-->
+                                                    <div class="d-flex flex-stack">
+                                                        <!--begin::Label-->
+                                                        <div class="me-5">
+                                                            <!--begin::Label-->
+                                                            <label class="fs-6 fw-semibold">Use as a billing
+                                                                adderess?</label>
+                                                            <!--end::Label-->
+                                                            <!--begin::Input-->
+                                                            <div class="fs-7 fw-semibold text-muted">If you need more
+                                                                info,
+                                                                please
+                                                                check budget
+                                                                planning</div>
+                                                            <!--end::Input-->
+                                                        </div>
+                                                        <!--end::Label-->
+                                                        <!--begin::Switch-->
+                                                        <label
+                                                            class="form-check form-switch form-check-custom form-check-solid">
+                                                            <!--begin::Input-->
+                                                            <input class="form-check-input" name="billing"
+                                                                type="checkbox" value="1"
+                                                                id="kt_modal_add_customer_billing" checked="checked"
+                                                                style="opacity: 1;" />
+                                                            <!--end::Input-->
+                                                            <!--begin::Label-->
+                                                            <span class="form-check-label fw-semibold text-muted"
+                                                                for="kt_modal_add_customer_billing">Yes</span>
+                                                            <!--end::Label-->
+                                                        </label>
+                                                        <!--end::Switch-->
+
+                                                    </div>
+
+                                                    <!--begin::Wrapper-->
+                                                </div>
+                                                <a class="btn btn-primary">Save</a>
+                                                <!--end::Input group-->
+                                            </div>
+                                            <!--end::Billing form-->
+                                        </div>
+                                        <!--end::Scroll-->
+                                    </div>
+                                    <!--end::Modal body-->
+                                </div>
+                                <div class="tab-pane fade" id="kt_tab_pane_2" role="tabpanel">
+                                    <!--begin::Modal body-->
+                                    <div class="modal-body py-10 px-5 mx-auto">
+                                        <!--begin::Scroll-->
+                                        <div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll"
+                                            data-kt-scroll="false" data-kt-scroll-activate="{default: false, lg: true}"
+                                            data-kt-scroll-max-height="auto"
+                                            data-kt-scroll-dependencies="#kt_modal_add_customer_header"
+                                            data-kt-scroll-wrappers="#kt_modal_add_customer_scroll"
+                                            data-kt-scroll-offset="300px">
+                                            <!--begin::Input group-->
+                                            <div class="fv-row mb-7">
+                                                <!--begin::Label-->
+                                                <label class="required fs-6 fw-semibold mb-2">Company</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control"
+                                                    placeholder="Conroy, Zieme and Wilkinson" name="name" value="" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Input group-->
+                                            <div class="fv-row mb-7">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">
+                                                    <span class="required">VAT Number</span>
+                                                    <span class="ms-1">
+                                                        <i class="ki-duotone ki-information fs-7">
+                                                            <span class="path1"></span>
+                                                            <span class="path2"></span>
+                                                            <span class="path3"></span>
+                                                        </i>
+                                                    </span>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control" placeholder="" name="email"
+                                                    value="" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Input group-->
+                                            <div class="fv-row mb-15">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">Phone</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control" placeholder="+1 (313) 759-1556"
+                                                    name="description" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Billing toggle-->
+                                            <div class="fw-bold fs-3 rotate collapsible mb-7" data-bs-toggle="collapse"
+                                                href="#kt_modal_add_customer_billing_info" role="button"
+                                                aria-expanded="false" aria-controls="kt_customer_view_details">Personal
+                                                Information
+                                                <span class="ms-2 rotate-180">
+                                                    <i class="ki-duotone ki-down fs-3"></i>
+                                                </span>
+                                            </div>
+                                            <!--end::Billing toggle-->
+                                            <!--begin::Billing form-->
+                                            <div id="kt_modal_add_customer_billing_info" class="collapse show">
+
+
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-semibold mb-2">Address Line 1</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" placeholder="" name="address1"
+                                                        value="101, Collins Street" />
+                                                    <!--end::Input-->
+                                                </div>
+
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-semibold mb-2">Address Line 2</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" placeholder="" name="address2"
+                                                        value="" />
+                                                    <!--end::Input-->
+                                                </div>
+
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-semibold mb-2">Town</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" placeholder="" name="city"
+                                                        value="Melbourne" />
+                                                    <!--end::Input-->
+                                                </div>
+
+                                                <div class="row g-9 mb-7">
+                                                    <!--begin::Col-->
+                                                    <div class="col-md-6 fv-row px-0">
+                                                        <!--begin::Label-->
+                                                        <label class="required fs-6 fw-semibold mb-2">State /
+                                                            Province</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Input-->
+                                                        <input class="form-control" placeholder="" name="state"
+                                                            value="Victoria" />
+                                                        <!--end::Input-->
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col-md-6 fv-row">
+                                                        <!--begin::Label-->
+                                                        <label class="required fs-6 fw-semibold mb-2">Post Code</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Input-->
+                                                        <input class="form-control" placeholder="" name="postcode"
+                                                            value="3000" />
+                                                        <!--end::Input-->
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-7 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-semibold mb-2">
+                                                        <span class="required">Country</span>
+                                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                                            title="Country of origination">
+                                                            <i class="ki-duotone ki-information fs-7">
+                                                                <span class="path1"></span>
+                                                                <span class="path2"></span>
+                                                                <span class="path3"></span>
+                                                            </i>
+                                                        </span>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <select name="country" aria-label="Select a Country"
+                                                        data-control="select2" data-placeholder="Select a Country..."
+                                                        class="form-select fw-bold">
+                                                        <option value="">Select a Country...</option>
+                                                        <option value="AF">Afghanistan</option>
+                                                        <option value="AX">Aland Islands</option>
+                                                        <option value="AL">Albania</option>
+                                                        <option value="DZ">Algeria</option>
+                                                        <option value="AS">American Samoa</option>
+                                                    </select>
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="alert alert-warning">
+                                                    <div class="checkbox checkbox-default -tw-mb-0.5">
+                                                        <input type="checkbox" name="update_all_other_transactions"
+                                                            id="update_all_other_transactions" wfd-id="id24">
+                                                        <label for="update_all_other_transactions">
+                                                            Update the shipping/billing info on all previous
+                                                            invoices/estimates<br>
+                                                        </label>
+                                                    </div>
+                                                    <p class="tw-ml-7 tw-mb-0">
+                                                        If you check this field shipping and billing info will be
+                                                        updated to
+                                                        all
+                                                        invoices and estimates. Note: Invoices with status paid won't be
+                                                        affected.
+                                                    </p>
+                                                    <div class="checkbox checkbox-default">
+                                                        <input type="checkbox" name="update_credit_notes"
+                                                            id="update_credit_notes" wfd-id="id25">
+                                                        <label for="update_credit_notes">
+                                                            Update the shipping/billing info on all previous credit
+                                                            notes
+                                                            (Closed
+                                                            credit notes not affected) </label>
+                                                    </div>
+                                                </div>
+                                                <!--end::Input group-->
+                                            </div>
+                                            <!--end::Billing form-->
+                                        </div>
+                                        <!--end::Scroll-->
+                                    </div>
+                                    <!--end::Modal body-->
+                                </div>
+                                <div class="tab-pane fade" id="kt_tab_pane_3" role="tabpanel">
+                                    <div class="row mx-auto">
+                                        <div class="card col mt-5">
+                                            <div class="card-header mt-5 customer-form__inner row align-items-center">
+                                                <div class="row mt-0 mx-auto">
+                                                    <div class="col px-0">
+                                                        <a class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center"
+                                                            href="#">
+
+                                                            Assign Admin
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt-0 pb-5 mt-0 g-5 mx-auto">
+                                                    <div class="col px-0">
+                                                        <select class="form-select" aria-label="Page Select">
+                                                            <option selected="" value="5">Page</option>
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="100">100</option>
+                                                            <option value="">All</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="btn-group col">
+                                                        <button
+                                                            class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">Export</button>
+                                                        <button
+                                                            class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                                                            id="refresh-btn">
+                                                            <i class="fas fa-sync"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table
+                                                        class="table table-row-dashed table-row-gray-300 gy-7 align-items-center">
+                                                        <thead>
+                                                            <tr class="fw-bold fs-6 text-gray-800">
+                                                                <th>Staff Member</th>
+                                                                <th>Data Assigned</th>
+                                                                <th>Options</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="#">Zion Gerlach</a>
+                                                                </td>
+                                                                <td>
+                                                                    <span class="text-dark">2023-08-10 03:20:59</span>
+                                                                </td>
+                                                                <td>
+                                                                    <i style="cursor:pointer; width: 26px; height: 26px; font-size: 18px;"
+                                                                        class="fas fa-trash-alt"></i>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row pt-5 mx-auto">
+                                                    <div
+                                                        class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                                                        <div
+                                                            class="row mx-2 align-items-center flex-column pb-5 text-center">
+                                                            Toplam 48630 Kayıttan
+                                                            <input value="1" style="scale:0.8; max-width: 100px;"
+                                                                type="text" class="form-control col mx-3" wfd-id="id38">
+                                                            arası gösteriliyor
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                                                        <div class="dataTables_paginate paging_simple_numbers"
+                                                            id="kt_ecommerce_products_table_paginate">
+                                                            <ul class="pagination">
+                                                                <li class="paginate_button page-item previous disabled"
+                                                                    id="kt_ecommerce_products_table_previous">
+                                                                    <a href="#"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        class="page-link pager-page" page="1">
+                                                                        <i class="fa-solid fa-angles-left"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="paginate_button page-item">
+                                                                    <a href="#"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        class="page-link pager-page" page="0">
+                                                                        <i class="fa-solid fa-angle-left"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="paginate_button page-item">
+                                                                    <a href="#" page="1"
+                                                                        class="page-link pager-page active">1</a>
+                                                                </li>
+                                                                <li class="paginate_button page-item">
+                                                                    <a href="#" page="2"
+                                                                        class="page-link pager-page ">2</a>
+                                                                </li>
+                                                                <li class="paginate_button page-item">
+                                                                    <a href="#" page="3"
+                                                                        class="page-link pager-page ">3</a>
+                                                                </li>
+                                                                <li class="paginate_button page-item next ">
+                                                                    <a class="page-link pager-page" href="#" page="2">
+                                                                        <i class="fa-solid fa-angle-right"></i>
+                                                                    </a>
+                                                                </li>
+
+                                                                <li class="paginate_button page-item">
+                                                                    <a class="page-link pager-page" href="#"
+                                                                        page="4863">
+                                                                        <i class="fa-solid fa-angles-right"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-	
+</div>
+<!--end::Modal - New Customer-->
+
+
+
+<div class="row">
+    <div class="card shadow-sm customers-summary col-11 mx-auto mobile-margin-top visible-sm">
+        <div class="card-header">
+            <h3 class="card-title">Customers Summary</h3>
+        </div>
+        <div class="card-body py-5">
+            <div class="row pt-5 align-items-center">
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p><span class="h2 me-3">15</span>Total Customers</p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-success">
+                        <span class="h2 me-3">14</span>Active Customers
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-danger">
+                        <span class="h2 me-3">1</span>Inactive Customers
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-info">
+                        <span class="h2 me-3">14</span>Active Contacts
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-danger">
+                        <span class="h2 me-3">0</span>Inactive Contacts
+                    </p>
+                </div>
+                <div class="col-lg-2 col-4 px-5 customers-summary__row-titles">
+                    <p class="text-muted">
+                        <span class="h2 me-3">3</span>Contacts Logged In
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @* <div class="row inputs">
-	<form class="card shadow-sm customer-form col-11 mx-auto mt-5">
-		<div class="customer-form__inner card-body row align-items-center">
+    <form class="card shadow-sm customer-form col-11 mx-auto mt-5">
+        <div class="customer-form__inner card-body row align-items-center">
             <div class="col-md-12 col-lg-4">
-                <label style="padding-top: 0 !important;" for ="filter" class="col-form-label">Filter</label>
-			    <input id="filter" type="text" class="form-control form-control-sm" placeholder="Filter">
+                <label style="padding-top: 0 !important;" for="filter" class="col-form-label">Filter</label>
+                <input id="filter" type="text" class="form-control form-control-sm" placeholder="Filter">
             </div>
-            <div class="col-md-12 col-lg-4"> 
+            <div class="col-md-12 col-lg-4">
                 <label style="padding-top: 0 !important;" for="groups-select" class="col-form-label">Groups</label>
                 <select class="form-select form-control-sm" id="groups-select" aria-label="Select">
                     <option selected>Groups</option>
@@ -87,996 +623,764 @@
                     <option value="3">VIP</option>
                     <option value="4">Budget</option>
                     <option value="5">Wholesaler</option>
-                </select> 
+                </select>
             </div>
-		</div>
-	</form>
+        </div>
+    </form>
 </div>
- *@
-    <div class="row">
-        <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
-        <div class="card-header mt-10 customer-form__inner row align-items-center">
+*@
+<div class="row">
+    <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
+        <div class="card-header mt-0 customer-form__inner row g-5 align-items-center">
             <select class="form-select col" aria-label="Page Select">
-				<option selected value="5">Page</option>
-				<option value="10">10</option>
-				<option value="25">25</option>
-				<option value="100">100</option>
-				<option value="">All</option>
-			</select>
-            <div class="btn-group col">
-                <button class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">Export</button>
-                <button class="btn btn-secondary d-flex align-items-center justify-content-center" id="bulk-actions">Bulk Actions</button>
+                <option selected value="5">Page</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="100">100</option>
+                <option value="">All</option>
+            </select>
+            <div class="btn-group col px-0">
+                <button
+                    class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                    <a href="/customer/import" class="d-flex align-items-center text-white">
+                        <i style="height: 15px;" class="fa-solid fa-upload me-1"></i>
+                        Import
+                    </a>
+                </button>
+                <button class="btn btn-secondary d-flex align-items-center justify-content-center" id="bulk-actions">
+                    <a href="/all_contacts" class="d-flex align-items-center text-black">
+                        <i style="height: 15px;" class="fa-regular fa-user me-1"></i>
+                        Contacts
+                    </a>
+                </button>
                 <button class="btn btn-primary refresh-btn d-flex align-items-center justify-content-center">
-                   <i class="fa-regular fa-plus"></i> New
-                </button> 
-                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center" id="refresh-btn">
+                    <a class="d-flex align-items-center text-white" data-bs-toggle="modal"
+                        data-bs-target="#kt_modal_new_customer">
+                        <i style="height: 15px;" class="fa-regular fa-plus me-1"></i>
+                        New
+                    </a>
+                </button>
+                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                    id="refresh-btn">
                     <i class="fas fa-sync"></i>
                 </button>
-                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center" id="refresh-btn">
+                <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                    id="refresh-btn">
                     <i class="fa fa-filter"></i>
                 </button>
             </div>
         </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table
-                        class="table table-row-dashed table-row-gray-300 gy-7 align-items-center"
-                    >
-                        <thead>
-                            <tr class="fw-bold fs-6 text-gray-800">
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <th>#</th>
-                                <th>Company</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Active</th>
-                                <th>Groups</th>
-                                <th>Date Created</th>
-                                <th>İşlemler</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>1</td>
-                                <td>
-                                    <a href="#">Tiger Nixon</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-row-dashed table-row-gray-300 gy-7 align-items-center">
+                    <thead>
+                        <tr class="fw-bold fs-6 text-gray-800">
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <th>#</th>
+                            <th>Company</th>
+                            <th>Contact</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Active</th>
+                            <th>Groups</th>
+                            <th>Date Created</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>1</td>
+                            <td>
+                                <a href="/customer/detay">Tiger Nixon</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        VIP
                                     </div>
-                                </td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                    <td>
-                                        <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                VIP
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                        </div>
-                                    </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
+                                    </div>
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>2</td>
+                            <td>
+                                <a href="/customer/detay">Garrett Winters</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Budget
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>2</td>
-                                <td>
-                                    <a href="#">Garrett Winters</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
                                     </div>
-                                </td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                <td>
-                                     <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                               Budget
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                     </div>
-                                </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="true"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="true">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>3</td>
+                            <td>
+                                <a href="/customer/detay">Ashton Cox</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Budget
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>3</td>
-                                <td>
-                                    <a href="#">Ashton Cox</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
                                     </div>
-                                </td>
-                                <td>Junior Technical Author</td>
-                                <td>San Francisco</td>
-                                <td>66</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                <td>  
-                                    <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                               Budget
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                     </div>
-                                </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="true"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="true">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>4</td>
+                            <td>
+                                <a href="/customer/detay">Cedric Kelly</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>Senior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Budget
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>4</td>
-                                <td>
-                                    <a href="#">Cedric Kelly</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
                                     </div>
-                                </td>
-                                <td>Senior Javascript Developer</td>
-                                <td>Edinburgh</td>
-                                <td>22</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                <td>  
-                                    <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                               Budget
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                     </div>
-                                </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="true"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="true">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>5</td>
+                            <td>
+                                <a href="/customer/detay">Airi Satou</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>33</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Budget
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>5</td>
-                                <td>
-                                    <a href="#">Airi Satou</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
                                     </div>
-                                </td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>33</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                <td>  
-                                    <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                               Budget
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                     </div>
-                                </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="true"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="true">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>6</td>
+                            <td>
+                                <a href="/customer/detay">Brielle Williamson</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>Integration Specialist</td>
+                            <td>New York</td>
+                            <td>61</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Budget
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                    <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>6</td>
-                                <td>
-                                    <a href="#">Brielle Williamson</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
                                     </div>
-                                </td>
-                                <td>Integration Specialist</td>
-                                <td>New York</td>
-                                <td>61</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                <td>  
-                                    <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                               Budget
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                     </div>
-                                </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="true"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="true">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>7</td>
+                            <td>
+                                <a href="/customer/detay">Herrod Chandler</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>Sales Assistant</td>
+                            <td>San Francisco</td>
+                            <td>59</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Budget
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>7</td>
-                                <td>
-                                    <a href="#">Herrod Chandler</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
                                     </div>
-                                </td>
-                                <td>Sales Assistant</td>
-                                <td>San Francisco</td>
-                                <td>59</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                <td>  
-                                    <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                               Budget
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                     </div>
-                                </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="true"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="true">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>3</td>
+                            <td>
+                                <a href="/customer/detay">Ashton Cox</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Budget
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>3</td>
-                                <td>
-                                    <a href="#">Ashton Cox</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
                                     </div>
-                                </td>
-                                <td>Junior Technical Author</td>
-                                <td>San Francisco</td>
-                                <td>66</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                <td>  
-                                    <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                               Budget
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                     </div>
-                                </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="true"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="true">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label><input type="checkbox"></label>
+                            </th>
+                            <td>4</td>
+                            <td>
+                                <a href="/customer/detay">Cedric Kellys</a>
+                                <div class="row-options">
+                                    <a href="/customer/detay">View</a>
+                                    <a href="/customer/detay">Contacts</a>
+                                    <a href="#" class="text-danger">Delete</a>
+                                </div>
+                            </td>
+                            <td>Senior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>
+                                <label class="customer-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="customer-slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Budget
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label><input type="checkbox"></label>
-                                </th>
-                                <td>4</td>
-                                <td>
-                                    <a href="#">Cedric Kellys</a>
-                                    <div class="row-options">
-                                        <a href="#">View</a>
-                                        <a href="#">Contacts</a>
-                                        <a href="#" class="text-danger">Delete</a> 
+                                    <div
+                                        class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
+                                        Wholesaler
                                     </div>
-                                </td>
-                                <td>Senior Javascript Developer</td>
-                                <td>Edinburgh</td>
-                                <td>22</td>
-                                <td>
-                                    <label class="customer-switch">
-                                        <input type="checkbox" checked>
-                                        <span class="customer-slider"></span>
-                                    </label>
-                                </td>
-                                <td>  
-                                    <div class="row">
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                               Budget
-                                            </div>
-                                            <div class="col mx-2 border border-secondary p-1 d-flex align-items-center justify-content-center bg-light rounded">
-                                                Wholesaler
-                                            </div>
-                                     </div>
-                                </td>
-                                <td>03-08-2023 18:00:07</td>
-                                <td>
-                                    <div class="btn-group">                                 
-                                        <button
-                                            type="button"
-                                            class="btn btn-sm btn-primary dropdown-toggle show"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="true"
-                                        >
-                                            İşlemler
-                                        </button>
-                                        <ul
-                                            class="dropdown-menu"
-                                            style="
+                                </div>
+                            </td>
+                            <td>03-08-2023 18:00:07</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle show"
+                                        data-bs-toggle="dropdown" aria-expanded="true">
+                                        İşlemler
+                                    </button>
+                                    <ul class="dropdown-menu" style="
                                                 position: absolute;
                                                 inset: 0px 0px auto auto;
                                                 margin: 0px;
                                                 transform: translate3d(-0.5px, 37px, 0px);
-                                            "
-                                            data-popper-placement="bottom-end"
-                                        >
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="DataFormPopup"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="WebSiteCrawler"
-                                                    multi="false"
-                                                    id="50442"
-                                                    href="#"
-                                                    >Web Sitesinden Data Getir</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="FirmaFormPopup"
-                                                    params='{"id":"50442"}'
-                                                    href="#"
-                                                    >Firma Düzenle</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    class="dropdown-item"
-                                                    event="KisiFormPopup"
-                                                    params='{"firmaId":"50442"}'
-                                                    href="#"
-                                                    >Kişi Ekle</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-        @*         <div class="row align-items-center mt-10">
-                    <p class="col mb-0">Showing 1 to 14 of 14 entries</p>
-                    <ul class="pagination col">
-                         <li class="page-item previous disabled"><a href="#" class="page-link"><i class="previous"></i></a></li>
-                         <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                         <li class="page-item"><a href="#" class="page-link">2</a></li>
-                         <li class="page-item "><a href="#" class="page-link">3</a></li>
-                         <li class="page-item "><a href="#" class="page-link">4</a></li>
-                         <li class="page-item next"><a href="#"  class="page-link"><i class="next"></i></a></li>
-                     </ul>
-                </div> *@
-                <div class="row">
-    <div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
-        <div class="dataTables_length" id="kt_ecommerce_products_table_length">
-            <label>
-                <select class="form-select form-select-sm form-select-solid" id="PagerAdetSelect">
-                    <option value="5">5 adet</option>
-                    <option value="10" selected="">10 adet</option>
-                    <option value="25">25 adet</option>
-                    <option value="50">50 adet</option>
-                    <option value="100">100 adet</option>
-                </select>
-            </label>
-        </div>
-        <div class="row mx-2 align-items-center">
-            Toplam 48630 Kayıttan 
-            <input value="1" style="scale:0.8" type="text" class="form-control col mx-3"/>
-            arası gösteriliyor
-        </div>
-    </div>
-        <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-            <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
-                <ul class="pagination">
-                    <li class="paginate_button page-item previous disabled" id="kt_ecommerce_products_table_previous">
-                        <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page" page="1">
-                            <i class="fa-solid fa-angles-left"></i>
-                        </a>
+                                            " data-popper-placement="bottom-end">
+                                        <li>
+                                            <a class="dropdown-item" event="DataFormPopup" multi="false" id="50442"
+                                                href="#">Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="WebSiteCrawler" multi="false" id="50442"
+                                                href="#">Web Sitesinden Data Getir</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="FirmaFormPopup" params='{"id":"50442"}'
+                                                href="#">Firma Düzenle</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" event="KisiFormPopup" params='{"firmaId":"50442"}'
+                                                href="#">Kişi Ekle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            @* <div class="row align-items-center mt-10">
+                <p class="col mb-0">Showing 1 to 14 of 14 entries</p>
+                <ul class="pagination col">
+                    <li class="page-item previous disabled"><a href="#" class="page-link"><i class="previous"></i></a>
                     </li>
-                    <li class="paginate_button page-item">
-                        <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page" page="0">
-                            <i class="fa-solid fa-angle-left"></i>
-                        </a>
-                    </li>
-                        <li class="paginate_button page-item">
-                            <a href="#" page="1" class="page-link pager-page active">1</a>
-                        </li>
-                        <li class="paginate_button page-item">
-                            <a href="#" page="2" class="page-link pager-page ">2</a>
-                        </li>
-                        <li class="paginate_button page-item">
-                            <a href="#" page="3" class="page-link pager-page ">3</a>
-                        </li>
-                        <li class="paginate_button page-item">
-                            <a href="#" page="4" class="page-link pager-page ">4</a>
-                        </li>
-                        <li class="paginate_button page-item">
-                            <a href="#" page="5" class="page-link pager-page ">5</a>
-                        </li>
-                        <li class="paginate_button page-item">
-                            <a href="#" page="6" class="page-link pager-page ">6</a>
-                        </li>
-
-                    <li class="paginate_button page-item next ">
-                        <a class="page-link pager-page" href="#" page="2">
-                            <i class="fa-solid fa-angle-right"></i> 
-                        </a>
-                    </li>
-
-                    <li class="paginate_button page-item">
-                        <a class="page-link pager-page" href="#" page="4863">
-                            <i class="fa-solid fa-angles-right"></i>
-                        </a>
-                    </li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item "><a href="#" class="page-link">3</a></li>
+                    <li class="page-item "><a href="#" class="page-link">4</a></li>
+                    <li class="page-item next"><a href="#" class="page-link"><i class="next"></i></a></li>
                 </ul>
-            </div>
-        </div>
-</div>
+            </div> *@
+            <div class="row">
+                <div
+                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <div class="dataTables_length" id="kt_ecommerce_products_table_length">
+                        <label>
+                            <select class="form-select form-select-sm form-select-solid" id="PagerAdetSelect">
+                                <option value="5">5 adet</option>
+                                <option value="10" selected="">10 adet</option>
+                                <option value="25">25 adet</option>
+                                <option value="50">50 adet</option>
+                                <option value="100">100 adet</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="row mx-2 align-items-center">
+                        Toplam 48630 Kayıttan
+                        <input value="1" style="scale:0.8" type="text" class="form-control col mx-3" />
+                        arası gösteriliyor
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                    <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled"
+                                id="kt_ecommerce_products_table_previous">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="1">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
+                                    page="0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="1" class="page-link pager-page active">1</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="2" class="page-link pager-page ">2</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="3" class="page-link pager-page ">3</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="4" class="page-link pager-page ">4</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="5" class="page-link pager-page ">5</a>
+                            </li>
+                            <li class="paginate_button page-item">
+                                <a href="#" page="6" class="page-link pager-page ">6</a>
+                            </li>
+
+                            <li class="paginate_button page-item next ">
+                                <a class="page-link pager-page" href="#" page="2">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </li>
+
+                            <li class="paginate_button page-item">
+                                <a class="page-link pager-page" href="#" page="4863">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
 
 
@@ -1085,19 +1389,25 @@
 
 
 @section styles{
-		<link href="~/css/customer.css" rel="stylesheet" />
+<link href="~/css/customer.css" rel="stylesheet" />
 }
 
 @section scripts{
-		<!--begin::Custom Javascript(used for this page only)-->
-		<script src="assets/js/custom/apps/customers/list/export.js"></script>
-		<script src="assets/js/custom/apps/customers/list/list.js"></script>
-		<script src="assets/js/custom/apps/customers/add.js"></script>
-		<script src="assets/js/widgets.bundle.js"></script>
-		<script src="assets/js/custom/widgets.js"></script>
-		<script src="assets/js/custom/apps/chat/chat.js"></script>
-		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-		<!--end::Custom Javascript-->
+<!--begin::Vendors Javascript(used for this page only)-->
+<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<!--end::Vendors Javascript-->
+<!--begin::Custom Javascript(used for this page only)-->
+<script src="assets/js/custom/pages/user-profile/general.js"></script>
+<script src="assets/js/widgets.bundle.js"></script>
+<script src="assets/js/custom/widgets.js"></script>
+<script src="assets/js/custom/apps/chat/chat.js"></script>
+<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/type.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/details.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/finance.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/complete.js"></script>
+<script src="assets/js/custom/utilities/modals/offer-a-deal/main.js"></script>
+<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+<!--end::Custom Javascript-->
 }
