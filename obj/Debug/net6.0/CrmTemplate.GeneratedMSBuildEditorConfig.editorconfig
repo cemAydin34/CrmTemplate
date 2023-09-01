@@ -68,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/cemay/source/repos/CrmTemplate/CrmTemplate/Views/Customer/Popups/ProfilePopup/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcUG9wdXBzXFByb2ZpbGVQb3B1cFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/cemay/source/repos/CrmTemplate/CrmTemplate/Views/Customer/_Contacts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcX0NvbnRhY3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

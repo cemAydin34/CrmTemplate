@@ -1,5 +1,5 @@
 @{
-    Layout = null;
+Layout = null;
 }
 <div class="row mx-auto">
     <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
@@ -7,14 +7,6 @@
     </div>
     <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
         <div class="card-header mt-5 customer-form__inner row align-items-center">
-            <div class="row mt-0 mx-auto gy-5">
-                <a class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center me-5"
-                    href="#">
-                    <i class="fa-regular fa-plus"></i>
-                    New Contract
-                </a>
-            </div>
-
             <div class="row py-5 mx-auto">
                 <select class="form-select col" aria-label="Page Select">
                     <option selected="" value="5">Page</option>
@@ -29,6 +21,13 @@
                     <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
                         id="refresh-btn">
                         <i class="fas fa-sync"></i>
+                    </button>
+                    <button
+                        class="btn btn-light customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                        <a href="#" class="d-flex align-items-center text-dark">
+                            <i style="height: 15px;" class="fa-regular fa-plus me-1"></i>
+                            New
+                        </a>
                     </button>
                     <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
                         id="refresh-btn">

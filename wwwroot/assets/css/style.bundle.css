@@ -5467,7 +5467,7 @@ fieldset:disabled .btn {
 }
 .modal {
   --bs-modal-zindex: 1055;
-  --bs-modal-width: 500px;
+  --bs-modal-width: 600px !important;
   --bs-modal-padding: 1.75rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-bg: var(--bs-body-bg);
@@ -39332,8 +39332,8 @@ code:not([class*="language-"]) {
 }
 .table.gy-7 td,
 .table.gy-7 th {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .table.gx-7 td,
 .table.gx-7 th {

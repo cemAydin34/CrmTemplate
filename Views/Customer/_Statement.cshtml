@@ -1,5 +1,5 @@
 @{
-    Layout = null;
+Layout = null;
 }
 <div class="row mx-auto">
     <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
@@ -7,7 +7,7 @@
     </div>
     <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
         <div class="card-header mt-5 customer-form__inner row align-items-center">
-            <div class="row pb-3 mx-auto pt-5 align-items-center">
+            <div class="row px-0 pb-3 mx-auto pt-5 align-items-center">
                 <select style="max-width: 300px !important; height:43px;" class="form-select col fs-7"
                     aria-label="Page Select">
                     <option selected="" value="this-month">This Month</option>
@@ -36,7 +36,54 @@
                     </button>
                 </div>
             </div>
+            <div class="row border-bottom border-1 px-0 py-5">
+                <h2 class="px-0 col-12 text-muted">Customer Statement For Bradtke, Bednar and Jenkins</h2>
+                <div class="px-0 col-12 d-flex align-items-end flex-column">
+                    <p class="px-0 mb-1 fw-bold text-muted">Perfex INC</p>
+                    <p class="px-0 mb-1">172 Ivy Club Gottliebfurt</p>
+                    <p class="px-0 mb-1">New Heaven</p>
+                    <p class="px-0 mb-1">Canada [CA] 2364</p>
+                </div>
+            </div>
 
+            <div class="row px-0">
+                <div class="px-0 col-sm-12 col-md-7 py-5">
+                    <p class="px-0 mb-1 fw-bold text-muted">To:</p>
+                    <p class="px-0 mb-1">Bradtke, Bednar and Jenkins</p>
+                    <p class="px-0 mb-1">839 Reba Wall Apt. 692</p>
+                    <p class="px-0 mb-1">Wisokyport Wyoming</p>
+                    <p class="px-0 mb-1">XK 62495-1412</p>
+                </div>
+                <div class="px-0 col-sm-12 col-md-5 py-5 d-flex flex-column align-items-end">
+                    <h2 class="text-muted">Account Summary</h2>
+                    <p class="text-muted">2023-08-01 To 2023-08-31</p>
+                    <table class="table mb-0">
+                        <tbody>
+                            <tr>
+                                <td class="text-dark pb-1">Beginning Balance:</td>
+                                <td class="text-dark text-end pb-1">$0.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-dark py-1">Invoiced Amount:</td>
+                                <td class="text-dark text-end py-1">$11,398.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-dark py-1">Amount Paid:</td>
+                                <td class="text-dark text-end py-1">$0.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="text-dark py-1"><b>Balance Due</b>:</td>
+                                <td class="text-dark text-end py-1">$11,398.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <span class="text-center fw-semibold fw-6 py-3">Showing all invoices and payments between 2023-08-01 and
+                2023-08-31
+            </span>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -95,56 +142,7 @@
                     </tfoot>
                 </table>
             </div>
-            <div class="row pt-5 mx-auto">
-                <div
-                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
-                    <div class="row mx-2 align-items-center flex-column pb-5 text-center">
-                        Toplam 48630 Kayıttan
-                        <input value="1" style="scale:0.8; max-width: 100px;" type="text" class="form-control col mx-3"
-                            wfd-id="id38">
-                        arası gösteriliyor
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                    <div class="dataTables_paginate paging_simple_numbers" id="kt_ecommerce_products_table_paginate">
-                        <ul class="pagination">
-                            <li class="paginate_button page-item previous disabled"
-                                id="kt_ecommerce_products_table_previous">
-                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
-                                    page="1">
-                                    <i class="fa-solid fa-angles-left"></i>
-                                </a>
-                            </li>
-                            <li class="paginate_button page-item">
-                                <a href="#" aria-controls="kt_ecommerce_products_table" class="page-link pager-page"
-                                    page="0">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                </a>
-                            </li>
-                            <li class="paginate_button page-item">
-                                <a href="#" page="1" class="page-link pager-page active">1</a>
-                            </li>
-                            <li class="paginate_button page-item">
-                                <a href="#" page="2" class="page-link pager-page ">2</a>
-                            </li>
-                            <li class="paginate_button page-item">
-                                <a href="#" page="3" class="page-link pager-page ">3</a>
-                            </li>
-                            <li class="paginate_button page-item next ">
-                                <a class="page-link pager-page" href="#" page="2">
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </a>
-                            </li>
 
-                            <li class="paginate_button page-item">
-                                <a class="page-link pager-page" href="#" page="4863">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

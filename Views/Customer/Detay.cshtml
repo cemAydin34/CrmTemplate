@@ -261,7 +261,7 @@
 					</div>
 					<!--end::Sidebar-->
 					<!--begin::Content-->
-					<div class="flex-lg-row-fluid ms-lg-7 ms-xl-10" id="contentArea">
+					<div class="flex-lg-row-fluid ms-1" id="contentArea">
 						<!--begin::Card-->
 						@await Html.PartialAsync("_Statement")
 						<!--end::Card-->
@@ -307,21 +307,22 @@
 
 
 @section styles{
-<link href="~/css/customer.css" rel="stylesheet" />
+<link href="~/assets/custom/css/customer.css" rel="stylesheet" />
 }
 
 @section scripts {
 <!--begin::Vendors Javascript(used for this page only)-->
-<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+<script src="~/assets/plugins/custom/datatables/datatables.bundle.js"></script>
 <!--end::Vendors Javascript-->
 <!--begin::Custom Javascript(used for this page only)-->
-<script src="assets/js/custom/apps/inbox/listing.js"></script>
-<script src="assets/js/widgets.bundle.js"></script>
-<script src="assets/js/custom/widgets.js"></script>
-<script src="assets/js/custom/apps/chat/chat.js"></script>
-<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+<script src="~/assets/js/custom/apps/inbox/listing.js"></script>
+<script src="~/assets/js/widgets.bundle.js"></script>
+<script src="~/assets/js/custom/widgets.js"></script>
+<script src="~/assets/js/custom/apps/chat/chat.js"></script>
+<script src="~/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+<script src="~/assets/js/custom/utilities/modals/create-app.js"></script>
+<script src="~/assets/js/custom/utilities/modals/users-search.js"></script>
+<script src="customer\Popups\ProfilePopup\index.js"></script>
 <!--end::Custom Javascript-->
 <script>
 	function partialGetir(url) {

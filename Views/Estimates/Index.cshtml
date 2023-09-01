@@ -1,12 +1,7 @@
 <div class="row mx-0">
     <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
         <div class="card-header mt-5 customer-form__inner row align-items-center">
-            <div class="mt-5 gy-5 row justify-content-between align-items-center mx-auto px-0">
-                <a class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center col"
-                    href="#">
-                    <i class="fa-regular fa-plus"></i>
-                    Create New Estimate
-                </a>
+            <div class="mt-5 row justify-content-between align-items-center mx-auto px-0">
                 <div class="btn-group col px-0 ms-auto">
                     <button
                         class="btn btn-secondary customer-form__inner__export-btn d-flex align-items-center justify-content-center"><i
@@ -34,6 +29,13 @@
                     <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
                         id="refresh-btn">
                         <i class="fas fa-sync"></i>
+                    </button>
+                    <button
+                        class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                        <a href="#" class="d-flex align-items-center text-white">
+                            <i style="height: 15px;" class="fa-regular fa-plus me-1"></i>
+                            New
+                        </a>
                     </button>
                     <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
                         id="refresh-btn">
@@ -256,5 +258,5 @@
 
 
 @section styles{
-<link href="~/css/customer.css" rel="stylesheet" />
+<link href="~/assets/custom/css/customer.css" rel="stylesheet" />
 }

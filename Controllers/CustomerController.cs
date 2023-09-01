@@ -105,6 +105,18 @@ namespace CrmTemplate.Controllers
             return View();
         }
 
+        // Popup Views 
+
+        public IActionResult ProfilePopup()
+        {
+            return View();
+        }
+
+        public IActionResult ContactsPopup()
+        {
+            return View();
+        }
+
 
     }
 }

@@ -9,6 +9,18 @@
       "PackagePath": "staticwebassets\\assets\\css\\style.bundle.css"
     },
     {
+      "Id": "C:\\Users\\cemay\\source\\repos\\CrmTemplate\\CrmTemplate\\wwwroot\\assets\\custom\\css\\customer.css",
+      "PackagePath": "staticwebassets\\assets\\custom\\css\\customer.css"
+    },
+    {
+      "Id": "C:\\Users\\cemay\\source\\repos\\CrmTemplate\\CrmTemplate\\wwwroot\\assets\\custom\\css\\global.css",
+      "PackagePath": "staticwebassets\\assets\\custom\\css\\global.css"
+    },
+    {
+      "Id": "C:\\Users\\cemay\\source\\repos\\CrmTemplate\\CrmTemplate\\wwwroot\\assets\\custom\\js\\global.js",
+      "PackagePath": "staticwebassets\\assets\\custom\\js\\global.js"
+    },
+    {
       "Id": "C:\\Users\\cemay\\source\\repos\\CrmTemplate\\CrmTemplate\\wwwroot\\assets\\js\\custom\\account\\api-keys\\api-keys.js",
       "PackagePath": "staticwebassets\\assets\\js\\custom\\account\\api-keys\\api-keys.js"
     },
@@ -8907,10 +8919,6 @@
     {
       "Id": "C:\\Users\\cemay\\source\\repos\\CrmTemplate\\CrmTemplate\\wwwroot\\assets\\plugins\\global\\plugins.bundle.js",
       "PackagePath": "staticwebassets\\assets\\plugins\\global\\plugins.bundle.js"
-    },
-    {
-      "Id": "C:\\Users\\cemay\\source\\repos\\CrmTemplate\\CrmTemplate\\wwwroot\\css\\customer.css",
-      "PackagePath": "staticwebassets\\css\\customer.css"
     },
     {
       "Id": "C:\\Users\\cemay\\source\\repos\\CrmTemplate\\CrmTemplate\\wwwroot\\css\\site.css",

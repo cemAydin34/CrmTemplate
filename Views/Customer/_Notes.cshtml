@@ -1,16 +1,20 @@
 @{
-    Layout = null;
+Layout = null;
 }
 <div class="row">
     <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
         <h2>Notes</h2>
-        <a href="#" class="btn btn-success btn-sm">
+        <a href="#" class="btn btn-success btn-sm new-note-btn">
             <i class="fa-regular fa-plus tw-mr-1"></i>
             New Note </a>
     </div>
     <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
         <div class="card-header mt-5 customer-form__inner row align-items-center">
-            <div class="row pb-3">
+            <div class="row pb-3 px-0">
+                <div class="form-group noteTextareaContainer col-12 px-0 pb-5" style="display: block;">
+                    <label for="note-description">Note description</label>
+                    <textarea class="form-control" id="note-description" rows="4"></textarea>
+                </div>
                 <select class="form-select col" aria-label="Page Select">
                     <option selected="" value="5">Page</option>
                     <option value="10">10</option>
@@ -122,3 +126,20 @@
         </div>
     </div>
 </div>
+
+<script>
+    let noteTextarea = document.querySelector(".noteTextareaContainer")
+    const newNoteBtn = document.querySelector(".new-note-btn")
+
+    newNoteBtn.addEventListener("click", () => {
+        if (noteTextarea.style.display === "none") {
+            noteTextarea.style.display = "block"
+        }
+        else {
+            noteTextarea.style.display = "none"
+        }
+
+    })
+
+
+</script>

@@ -1,5 +1,5 @@
 @{
-    Layout = null;
+Layout = null;
 }
 <div class="row">
     <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
@@ -9,20 +9,9 @@
         <div class="card-header mt-5 customer-form__inner row align-items-center">
             <div class="alert alert-warning mt-0">
                 $0.00 credits available.</div>
-            <div class="row mt-0">
-                <a class="btn btn-primary mb-5 customer-details-btn d-flex align-items-center justify-content-center me-5"
-                    href="#">
-                    <i class="fa-regular fa-plus"></i>
-                    New Credit Note
-                </a>
-                <a class="btn btn-primary mb-5 customer-details-btn d-flex align-items-center justify-content-center me-5"
-                    href="#">
-                    <i class="fa-regular fa-file-zipper"></i>
-                    Zip Credit Notes
-                </a>
-            </div>
 
-            <div class="row pb-3">
+
+            <div class="row pb-3 px-0">
                 <select class="form-select col" aria-label="Page Select">
                     <option selected="" value="5">Page</option>
                     <option value="10">10</option>
@@ -36,6 +25,20 @@
                     <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
                         id="refresh-btn">
                         <i class="fas fa-sync"></i>
+                    </button>
+                    <button
+                        class="btn btn-light customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                        <a href="#" class="d-flex align-items-center text-dark">
+                            <i style="height: 15px;" class="fa-regular fa-plus me-1"></i>
+                            New
+                        </a>
+                    </button>
+                    <button
+                        class="btn btn-light customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                        <a href="#" class="d-flex align-items-center text-dark">
+                            <i style="height: 15px;" class="fa-regular fa-file-zipper me-1"></i>
+                            Zip
+                        </a>
                     </button>
                     <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
                         id="refresh-btn">

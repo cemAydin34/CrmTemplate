@@ -1,1 +1,178 @@
-﻿asdasdfs
+﻿@{
+Layout = null;
+}
+
+<div class="row">
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Profile image</label>
+        <input class="form-control form-control-sm" type="file" id="formFile">
+    </div>
+    <div class="mb-3">
+        <label for="fname" class="form-label">First Name</label>
+        <input type="text" class="form-control form-control-sm" id="fname">
+    </div>
+    <div class="mb-3">
+        <label for="lname" class="form-label">Last Name</label>
+        <input type="text" class="form-control form-control-sm" id="lname">
+    </div>
+    <div class="mb-3">
+        <label for="position" class="form-label">Position</label>
+        <input type="text" class="form-control form-control-sm" id="position">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control form-control-sm" id="email">
+    </div>
+    <div class="mb-3">
+        <label for="phonenumber" class="form-label">Phone</label>
+        <input type="text" class="form-control form-control-sm" id="phonenumber">
+    </div>
+    <div class="mb-3">
+        <label for="direction" class="form-label">Direction</label>
+        <select id="direction" class="form-select form-select-sm">
+            <option selected>System Default</option>
+            <option value="LTR">LTR</option>
+            <option value="RTL">RTL</option>
+        </select>
+    </div>
+    <div style="gap: 0 10px; position: relative;" class="mb-10 d-flex align-items-end">
+        <div class="form-group w-100">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control form-control-sm" id="password">
+            <span style="position: absolute;" class="form-text text-danger">This field is
+                required.</span>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-sm btn-light">
+                <i style="color: #0095e8;" class="fa fa-eye"></i>
+            </button>
+            <button class="btn btn-sm btn-light">
+                <i style="color: #0095e8;" class="fa fa-refresh"></i>
+            </button>
+        </div>
+    </div>
+    <div style="border-top: var(--bs-modal-footer-border-width) solid
+                                var(--bs-modal-footer-border-color); 
+                                border-bottom:var(--bs-modal-footer-border-width) solid
+                                var(--bs-modal-footer-border-color);" class="row gy-3 m-0 py-5">
+        <div class="form-check col-12 d-flex align-items-center mt-0">
+            <input class="form-check-input me-2 cursor-pointer opacity-100" type="checkbox" value=""
+                id="primary-contact">
+            <label class="form-check-label cursor-pointer text-dark fw-semibold" for="primary-contact">
+                Primary Contact
+            </label>
+        </div>
+        <div class="form-check col-12 d-flex align-items-center">
+            <input class="form-check-input me-2 cursor-pointer opacity-100" type="checkbox" value="" id="welcome-mail">
+            <label class="form-check-label cursor-pointer text-dark fw-semibold" for="welcome-mail">
+                Do not send welcome email
+            </label>
+        </div>
+        <div class="form-check col-12 d-flex align-items-center mb-0">
+            <input class="form-check-input me-2 cursor-pointer opacity-100" type="checkbox" value="" id="password-mail">
+            <label class="form-check-label cursor-pointer text-dark fw-semibold" for="password-mail">
+                Send SET password email
+            </label>
+        </div>
+    </div>
+    <div class="mb-5">
+        <p class="fw-semibold fs-6 text-gray-800 pt-5 mb-1">Permissions</p>
+        <span class="form-text text-danger">Make sure to set appropriate permissions for this
+            contact</span>
+    </div>
+    <div style="border-bottom:var(--bs-modal-footer-border-width) solid
+                                var(--bs-modal-footer-border-color);" class="row">
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Invoices</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Estimates</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Contracts</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Proposals</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Support</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Projects</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+    </div>
+    <div class="mb-5">
+        <p class="fw-semibold fs-6 text-gray-800 pt-5 mb-1">Email Notifications</p>
+        <span class="form-text text-danger">
+            Email notifications will be sent to this contact
+        </span>
+    </div>
+    <div class="row">
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Invoice</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Credit Note</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Tickets</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Estimate</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Project</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+        <div class="mb-3 d-flex align-items-center col-sm-6 col-md-4">
+            <span class="me-3">Contract</span>
+            <label class="customer-switch">
+                <input type="checkbox" checked="" wfd-id="id21">
+                <span class="customer-slider"></span>
+            </label>
+        </div>
+    </div>
+</div>

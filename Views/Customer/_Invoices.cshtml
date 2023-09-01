@@ -1,5 +1,5 @@
 @{
-    Layout=null;
+Layout=null;
 }
 <div class="row mx-auto">
     <div class="d-flex align-items-center justify-between mx-auto col-11 justify-content-between">
@@ -7,21 +7,6 @@
     </div>
     <div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
         <div class="card-header mt-5 customer-form__inner row align-items-center">
-            <div class="row mt-0 mx-auto gy-5">
-                <a class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center me-5"
-                    href="#">
-                    <i class="fa-regular fa-plus"></i>
-                    Create New Invoice
-                </a>
-                <a class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center me-5"
-                    href="#">
-                    <i class="fa-regular fa-file-zipper"></i>
-                    Zip Invoices
-                </a>
-            </div>
-            
-            
-            
             <div class="row g-5 mb-10 px-0 mx-auto">
                 <div class="col-sm-12 col-md-3">
                     <div class="card card-flush">
@@ -59,7 +44,7 @@
                     </div>
                 </div>
             </div>
-   @*          <div class="row inputs">
+            @* <div class="row inputs">
                 <form class="card shadow-sm customer-form col-11 mx-auto mb-5">
                     <div class="customer-form__inner card-body row align-items-center">
                         <div class="col-md-12 col-lg-4">
@@ -78,7 +63,7 @@
                                 <option value="5">Wholesaler</option>
                             </select>
                         </div>
-                    </div> 
+                    </div>
                 </form>
             </div> *@
             <div class="row pb-3 mx-auto">
@@ -96,9 +81,24 @@
                         id="refresh-btn">
                         <i class="fas fa-sync"></i>
                     </button>
-                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center" id="refresh-btn">
+                    <button
+                        class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                        <a href="#" class="d-flex align-items-center text-white">
+                            <i style="height: 15px;" class="fa-regular fa-plus tw-mr-1 me-1"></i>
+                            New
+                        </a>
+                    </button>
+                    <button
+                        class="btn btn-light customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+                        <a href="#" class="d-flex align-items-center text-dark">
+                            <i style="height: 15px;" class="fa-regular fa-file-zipper me-1"></i>
+                            Zip
+                        </a>
+                    </button>
+                    <button class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
+                        id="refresh-btn">
                         <i class="fa fa-filter"></i>
-                    </button> 
+                    </button>
                 </div>
             </div>
         </div>
