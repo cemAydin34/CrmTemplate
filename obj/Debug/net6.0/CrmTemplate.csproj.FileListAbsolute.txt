@@ -30,3 +30,35 @@ C:\Users\cemay\source\repos\CrmTemplate\CrmTemplate\obj\Debug\net6.0\CrmTemplate
 C:\Users\cemay\source\repos\CrmTemplate\CrmTemplate\obj\Debug\net6.0\CrmTemplate.genruntimeconfig.cache
 C:\Users\cemay\source\repos\CrmTemplate\CrmTemplate\obj\Debug\net6.0\ref\CrmTemplate.dll
 C:\Users\cemay\source\repos\CrmTemplate\CrmTemplate\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\bin\Debug\net6.0\appsettings.json
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\bin\Debug\net6.0\CrmTemplate.staticwebassets.runtime.json
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\bin\Debug\net6.0\CrmTemplate.exe
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\bin\Debug\net6.0\CrmTemplate.deps.json
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\bin\Debug\net6.0\CrmTemplate.runtimeconfig.json
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\bin\Debug\net6.0\CrmTemplate.dll
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\bin\Debug\net6.0\CrmTemplate.pdb
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.csproj.AssemblyReference.cache
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.AssemblyInfoInputs.cache
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.AssemblyInfo.cs
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.csproj.CoreCompileInputs.cache
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.RazorAssemblyInfo.cache
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.RazorAssemblyInfo.cs
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\staticwebassets\msbuild.CrmTemplate.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\staticwebassets\msbuild.build.CrmTemplate.props
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CrmTemplate.props
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CrmTemplate.props
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\scopedcss\bundle\CrmTemplate.styles.css
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\scopedcss\projectbundle\CrmTemplate.bundle.scp.css
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.dll
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\refint\CrmTemplate.dll
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.pdb
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\CrmTemplate.genruntimeconfig.cache
+C:\Users\fika yazılım\Desktop\Çalışmalar Cem\CrmTemplate\obj\Debug\net6.0\ref\CrmTemplate.dll

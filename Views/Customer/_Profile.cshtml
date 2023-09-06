@@ -39,7 +39,7 @@ Layout = null;
 		<h2>Profile</h2>
 	</div>
 	<div class="card shadow-sm col-11 mx-auto mb-10 mt-5">
-		<div class="card-header mt-5 customer-form__inner row align-items-center">
+		<div class="card-header mt-5 customer-form__inner row align-items-center px-0">
 			<div class="row mt-0 mx-auto gy-5">
 				<ul class="nav nav-tabs nav-line-tabs mb-0 px-5 mx-auto fs-5">
 					<li class="nav-item">
@@ -148,28 +148,28 @@ Layout = null;
 									</div>
 									<!--end::Input group-->
 									<!--begin::Input group-->
-									<div class="row g-9 mb-7">
-										<!--begin::Col-->
-										<div class="col-md-6 fv-row px-0">
-											<!--begin::Label-->
-											<label class="required fs-6 fw-semibold mb-2">State / Province</label>
-											<!--end::Label-->
-											<!--begin::Input-->
-											<input class="form-control" placeholder="" name="state" value="Victoria" />
-											<!--end::Input-->
-										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-md-6 fv-row">
-											<!--begin::Label-->
-											<label class="required fs-6 fw-semibold mb-2">Post Code</label>
-											<!--end::Label-->
-											<!--begin::Input-->
-											<input class="form-control" placeholder="" name="postcode" value="3000" />
-											<!--end::Input-->
-										</div>
-										<!--end::Col-->
+
+									<!--begin::Col-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-6 fw-semibold mb-2">State / Province</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="state" value="Victoria" />
+										<!--end::Input-->
 									</div>
+									<!--end::Col-->
+									<!--begin::Col-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-6 fw-semibold mb-2">Post Code</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="postcode" value="3000" />
+										<!--end::Input-->
+									</div>
+									<!--end::Col-->
+
 									<!--end::Input group-->
 									<!--begin::Input group-->
 									<div class="d-flex flex-column mb-7 fv-row">
@@ -332,28 +332,28 @@ Layout = null;
 										<!--end::Input-->
 									</div>
 
-									<div class="row g-9 mb-7">
-										<!--begin::Col-->
-										<div class="col-md-6 fv-row px-0">
-											<!--begin::Label-->
-											<label class="required fs-6 fw-semibold mb-2">State / Province</label>
-											<!--end::Label-->
-											<!--begin::Input-->
-											<input class="form-control" placeholder="" name="state" value="Victoria" />
-											<!--end::Input-->
-										</div>
-										<!--end::Col-->
-										<!--begin::Col-->
-										<div class="col-md-6 fv-row">
-											<!--begin::Label-->
-											<label class="required fs-6 fw-semibold mb-2">Post Code</label>
-											<!--end::Label-->
-											<!--begin::Input-->
-											<input class="form-control" placeholder="" name="postcode" value="3000" />
-											<!--end::Input-->
-										</div>
-										<!--end::Col-->
+
+									<!--begin::Col-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-6 fw-semibold mb-2">State / Province</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="state" value="Victoria" />
+										<!--end::Input-->
 									</div>
+									<!--end::Col-->
+									<!--begin::Col-->
+									<div class="d-flex flex-column mb-7 fv-row">
+										<!--begin::Label-->
+										<label class="required fs-6 fw-semibold mb-2">Post Code</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control" placeholder="" name="postcode" value="3000" />
+										<!--end::Input-->
+									</div>
+									<!--end::Col-->
+
 									<!--end::Input group-->
 									<!--begin::Input group-->
 									<div class="d-flex flex-column mb-7 fv-row">
@@ -370,7 +370,8 @@ Layout = null;
 										</label>
 										<!--end::Label-->
 										<!--begin::Input-->
-										<select name="country" aria-label="Select a Country" data-control="select2"
+										<select style="min-width: 178px; min-height: 40px;" name="country"
+											aria-label="Select a Country" data-control="select2"
 											data-placeholder="Select a Country..." class="form-select fw-bold">
 											<option value="">Select a Country...</option>
 											<option value="AF">Afghanistan</option>
@@ -415,26 +416,35 @@ Layout = null;
 						<div class="row mx-auto">
 							<div class="card col-12 mb-10 mt-5">
 								<div class="card-header mt-5 customer-form__inner row align-items-center">
-									<div class="row mt-0 mx-auto gy-5">
+									<!-- 									<div class="row mt-0 mx-auto gy-5">
 										<a event="profilePopup"
 											class="btn btn-primary customer-details-btn d-flex align-items-center justify-content-center me-5"
 											href="#">
 
 											Assign Admin
 										</a>
-									</div>
+									</div> -->
 
-									<div class="row py-5 mx-auto">
-										<select class="form-select col" aria-label="Page Select">
-											<option selected="" value="5">Page</option>
-											<option value="10">10</option>
-											<option value="25">25</option>
-											<option value="100">100</option>
-											<option value="">All</option>
-										</select>
-										<div class="btn-group col px-0">
+									<div class="row py-5 px-0 align-items-center">
+										<div class="col-sm-12 col-md-6 px-0">
+											<select class="form-select" aria-label="Page Select">
+												<option selected="" value="5">Page</option>
+												<option value="10">10</option>
+												<option value="25">25</option>
+												<option value="100">100</option>
+												<option value="">All</option>
+											</select>
+										</div>
+										<div class="btn-group col-sm-12 col-md-6 px-0">
+											<button event="profilePopup"
+												class=" btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+												Export
+											</button>
 											<button
-												class="btn btn-primary customer-form__inner__export-btn d-flex align-items-center justify-content-center">Export</button>
+												class="btn btn-light customer-form__inner__export-btn d-flex align-items-center justify-content-center">
+												<i class="fas fa-add"></i>
+												Add
+											</button>
 											<button
 												class="btn btn-light refresh-btn d-flex align-items-center justify-content-center"
 												id="refresh-btn">
@@ -479,7 +489,8 @@ Layout = null;
 									<div class="row pt-5 mx-auto">
 										<div
 											class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
-											<div class="row mx-2 align-items-center flex-column pb-5 text-center">
+											<div
+												class="row mx-2 align-items-center flex-column flex-md-row pb-5 text-center">
 												Toplam 48630 Kayıttan
 												<input value="1" style="scale:0.8; max-width: 100px;" type="text"
 													class="form-control col mx-3" wfd-id="id38">
